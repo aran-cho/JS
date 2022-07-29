@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .red{
+            color: red;
+            font-weight: bold;
+        }
+        .green{
+            color: green;
+            font-weight: bold;
+        }
+        .blue{
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+
+        for(i =1; i<=100; i++){
+            if(i%5===0 && i%7!==0){
+                document.write(`<p class="red"> ${i} </p>`);
+            } else if(i%7===0 && i%5!==0){
+                document.write(`<p class="green"> ${i} </p>`);
+            } else if(i%5===0 && i%7===0){
+                document.write(`<p class="blue"> ${i} </p>`);
+            }
+        }
+
+    </script>
+    <title>스타일시트 적용</title>
+</head>
+<body>
+    
+</body>
+</html>

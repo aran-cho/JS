@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var tv = new Object();
+        tv.color = "red";
+        tv.price = 300000;
+        tv.info = function(){
+            document.write(`tv 색상 ${this.color} <br>`);
+            document.write(`tv 가격 ${this.price} <br>`);
+        }
+        document.write(`<h1> tv 객체 메서드 호출</h1>`);
+        tv.info();
+
+        // var car = new Object();
+        // car.color = "black";
+        // car.price = 100;
+        // car.info = function(){
+        //     document.write(`car색상 ${this.color} <br>`);
+        //     document.write(`car가격 ${this.price} <br>`);
+        // }
+        document.write(`<h1> car 객체 메서드 호출</h1>`);
+        // car.info();
+
+        var car = {
+            color:"black",
+            price:"100.",
+            info:function(){
+                document.write(`car색상 ${this.color} <br>`);
+                document.write(`car가격 ${this.price} <br>`);
+            }
+        }
+        car.info();
+    </script>
+    <title>내장객체 생성</title>
+</head>
+<body>
+    
+</body>
+</html>

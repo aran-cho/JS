@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var tt = "Hello Thank you good luck to you";
+       
+        document.write(tt.charAt(16), "<br>");
+        document.write(tt.indexOf("you"), "<br>");
+        document.write(tt.indexOf("you", 14), "<br>"); //문자열 찾을때 사용
+        //indexOf("찾는 문자", 시작인덱스번호(생략가능));
+        document.write(tt.lastIndexOf("you"), "<br>"); //뒤쪽에서 확인
+        document.write(tt.match("luc"), "<br>"); 
+        document.write(tt.match("above"), "<br>"); //들어있지 않는 문자는 출력 되지않음
+        document.write(tt.length,"<br>"); //문자길이
+        document.write(tt.toUpperCase() ,"<br>");//대문자로 변환
+        document.write(tt.replace("you", "me"),"<br>");
+        //replace("찾는 문자","바꿀문자");
+        document.write(tt.slice(4,7),"<br>"); //끝나는 인덱스는 하나더 해서 숫자적기
+        document.write(tt.slice(16,25),"<br>");
+        document.write(String.fromCharCode(33), "<br>"); //아스키코드 반화 33->!
+        document.write(String.fromCharCode(36), "<br>");
+        document.write(String.fromCharCode(38), "<br>");
+
+
+    </script>
+    <title>문자열객체</title>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <!-- 
+    소문자 -> 대문자로
+    숫자 -> *로
+    이름변수설정 프롬프트
+    이름 받았을때 찍는거 (대문자 변환)
+    전화 프롬프트
+    서브스트링(substring()) 별표시 -->
+
+    <script>
+        var name= prompt("영문이름을 입력하세요","0");
+        document.write(name.toUpperCase(), "<br>");
+
+        var num = prompt("번호를 입력하세요","0");
+        document.write(num.substring(0, num.length-4) +"****", "<br>");
+        // document.write(num.substring(0, num.length-4) .concat("****"), "<br>");
+        // document.write(num.replace(8,12, "****"));
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

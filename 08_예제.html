@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // var h = 180;
+        // var w = 74;
+        // var hw = (h-100) *0.9
+        // 1)
+        // var result = "적정체중은" + hw + "kg  이며, 현재 적정체중에서 " + (w-hw) + "kg 초과한 것을 알 수 있다"
+
+        // document.write(result);
+        
+        // 2)
+        // var num = prompt("당신의 몸무게는?", "0");
+        // result = num-hw<=5 && num-hw>=5? "적정체중입니다":"적정체중이 아닙니다";
+        // document.write(result);
+
+        var name=prompt("당신의 이름은" , "0");
+        var height=prompt("당신의 신장은" , "0");
+        var weight=prompt("당신의 체중은" , "0");
+
+        var w = (height-100)*0.9;
+        var result = weight>=w-5 && weight<=w+5;
+        result = result ? "적정 체중입니다.":"적정 체중이 아닙니다";
+        document.write(name + "님은 " + result );
+
+    </script>
+    <title>적정체중 구하기</title>
+</head>
+<body>
+    
+</body>
+</html>

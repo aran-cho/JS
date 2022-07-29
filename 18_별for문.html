@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        //${}하면 결과가 연속으로 나오는 느낌
+        
+        //정사각형 별 만들기
+        // for(var i=1; i<=5; i++){
+        //     for(var j=1; j<=5; j++){
+        //         document.write(`*`);
+        //     }
+        //     document.write(`<br>`);
+        // }
+
+        //삼각형 별 만들기
+        // for(var i=1; i<=5; i++){
+        //     for(var j=1; j<=i; j++){
+        //         document.write(`*`);
+        //     }
+        //     document.write(`<br>`);
+        // }
+
+        //삼각형 별 만들기(반대로)
+        for(var i=5; i>0; i--){
+            for(var j=1; j<=i; j++){
+                document.write(`*`);
+            }
+            document.write(`<br>`);
+        }
+
+
+
+    </script>
+    <title>별for문</title>
+</head>
+<body>
+    
+</body>
+</html>
