@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var blocked = false;
+
+        function openPop(){
+            var newWin = window.open("notice.html", "pop", "width = 500,height= 400");
+            if(newWin == null){ //공지사항(newWin)쪽이 없다면 알럿을 실행
+                alert("팝업이 차단되었습니다. 팝업차단을 해제해주세요.");
+            }
+            //팝업차단을 해제한다면 공지사항이 뜰수 있도록
+        }
+    </script>
+    <title>팝업창 체크</title>
+</head>
+<body onload="openPop()">
+    <p>문서를 열면 팝업창이 표시됩니다.</p>
+</body>
+</html>

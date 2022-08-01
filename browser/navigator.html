@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        const ver = navigator.userAgent;
+        // console.log(ver);
+
+        const isIE = /trident/i.test(ver); // -/trident/i는 자바스크립트의 정규표현식 사용 
+        
+        if(isIE){
+            alert("익스플로러 브라우저로 접속하셨네요. 이 웹페이즈는 익스플로러를 지원하지 않습니다. 다른 브라우저로 접속하세요.");
+        }
+        //템플릿 문자(``)를 인식하지 못함
+    </script>
+    <title>navigator</title>
+</head>
+<body>
+
+</body>
+</html>
