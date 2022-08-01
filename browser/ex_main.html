@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // window.open("ex_notice.html","pop","width=500, height=400, left=200,top=300");
+        function openCenter(doc, win, w, h){
+            var left = (screen.availWidth-w)/2;
+            var top = (screen.availHeight-h)/2;
+            var opt = "left=" + left + ", top=" +top + ", width=" +w + ", height=" +h;
+
+            window.open(doc, win, opt);
+
+        }
+        openCenter("ex_notice.html", "pop", 500, 720);
+    </script>
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>

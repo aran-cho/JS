@@ -23,7 +23,7 @@
         var input = prompt("전체 응모자 수:");
         var num = Math.ceil(Math.random()*(input-1));
         // var num = Math.floor(Math.random()*(input-1)+1);
-        //0이 안나오고 당첨자 수가 전체 응모자 수를 넘지않게
+        //input에 0을 안넣었을때 0이 안나오고 당첨자 수가 전체 응모자 수를 넘지않게
 
         document.write(`<p>전체 응모자 수 : ${input}명 <br>당첨자: ${num}번</p>`);
     </script>

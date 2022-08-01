@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // window.open("notice.html","pop","width=500, height=400, left=200,top=300");
+        //notic.html을 팝업창으로 뜰수있게 
+        //"pop" 이름을 부여하지 않으면 새로고침시 계속 뜸.
+
+        function openCenter (doc, win, w, h)
+        //매개변수 4개
+        {
+            var left = (screen.availWidth-w)/2; //팝업창의 왼쪽 좌표
+            var top = (screen.availHeight-h)/2; //팝업창의 위쪽 좌표 
+            var opt = "left=" + left + ", top=" + top + ", width=" + w +", height=" + h; 
+            
+            window.open(doc, win, opt);
+            //파일명, 기능, 속성(길이는 몇이구 그런 위치값)
+        }
+        
+        openCenter("notice.html","pop", 500, 400);
+        //인수 4개
+        //매개변수와 인수의 개수가 같아야함
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <p>문서를 열면 팝업창이 뜹니다.</p>
+</body>
+</html>
