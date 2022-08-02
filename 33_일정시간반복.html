@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // let addNum = 0;
+        // let subNum = 100;
+
+        // let auto_1 = setInterval(    
+        //     function(){
+        //         addNum++;
+        //         console.log(`addNum : ${addNum}번째`);
+        //     }, 3000
+        // );
+
+        // let auto_2 = setInterval(    
+        //     function(){
+        //         subNum--;
+        //         console.log(`subNum : ${subNum}번째`);
+        //     }, 3000
+        // );
+
+
+        let addNum1 = 0;
+
+        let one = setTimeout(
+            function(){
+                console.log(`1초 후에 실행됩니다.`);
+            },100
+        );
+
+        let two = setInterval(
+            function(){
+                addNum1++;
+                console.log(`1초 후에 실행됩니다. ${addNum1}번째`);
+            },110
+        )
+
+
+    </script>
+    <title>일정시간반복</title>
+</head>
+<body>
+    <!-- onclick 소문자 c도 실행가능? => 그냥 사용해도 무방 -->
+    <!-- <button onClick="clearInterval(auto_1);">증가정지</button> -->
+    <button onClick="clearInterval(two);">감소정지</button>
+</body>
+</html>
