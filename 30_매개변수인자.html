@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <script>
-        function addNumber(num1, num2){
-            var sum = num1 + num2;
-            return sum;
+        // function addNumber(num1, num2){
+        //     var sum = num1 + num2;
+        //     return sum;
+        // }
+        // var result = addNumber(15,24);
+        // document.write(`두 수를 더한 값 : ${result}`);
+
+        // 매개변수가 3개 또는 10개일 경우 구현방법
+        // 가변매개변수설정
+        // function sample(...items){
+        //     console.log(items);
+        // }
+        // sample(1,2);
+        // sample(1,2,6,8,10);
+
+        //디폴트값을 부여하고 필요한것만 처리하는 형식으로
+        function earnings(name, wage=9160, hours=40){
+            let cost = wage*hours;
+            document.write(`# ${name} 님의 급여 정보 <br>
+            -시급 : ${wage}원 <br>
+            -근무 시간 : ${hours}시간 <br>
+            -급여 : ${cost}원 <br> <br>`);
         }
-        var result = addNumber(15,24);
-        document.write(`두 수를 더한 값 : ${result}`);
+        earnings("구름");
+        earnings("별","10000");
+        earnings("인성","10000","52");
+
     </script>
     <title>매개변수인자</title>
 </head>
