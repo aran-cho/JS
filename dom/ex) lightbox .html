@@ -1,43 +1,106 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>라이트박스 예제</title>
-    <link rel="stylesheet" href="css/lightbox1.css">
-  </head>
-  <body>
-    <div class="row">
-      <ul>
-        <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic"></li>
-        <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic"></li>
-        <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic"></li> 
-        <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic"></li>
-        <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic"></li>
-        <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>          
-      </ul>    
-    </div>
 
-    <div id="bigBox">
-		<img src="images/tree-1.jpg" alt="" id="bigBoximg">
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>라이트박스 예제</title>
+  <link rel="stylesheet" href="css/lightbox1.css">
+</head>
+
+<body>
+  <div class="row">
+    <ul>
+      <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic1"></li>
+      <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic2"></li>
+      <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic3"></li>
+      <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic4"></li>
+      <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic5"></li>
+      <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic6"></li>
+    </ul>
+  </div>
+
+  <div id="bigBox">
+    <img src="" alt="" id="bigBoxImg">
+  </div>
 
 
-    <script>
+  <script>
 
-      let pic = document.querySelector('.pic');
+    let pic1 = document.querySelector('.pic1');
+    let pic2 = document.querySelector('.pic2');
+    let pic3 = document.querySelector('.pic3');
+    let pic4 = document.querySelector('.pic4');
+    let pic5 = document.querySelector('.pic5');
+    let pic6 = document.querySelector('.pic6');
+    let box = document.querySelector('#bigBox #bigBoxImg');
 
-      pic.addEventListener("mouseover", bigPic, false);
-      pic.addEventListener("mouseout", originPic, false);
+    pic1.addEventListener("mouseover", bigPic, false);
+    pic1.addEventListener("mouseout", originPic, false);
 
-      //클릭시 하단의 이미지가 변경 되어야 하는 기능
-      function bigPic(){
-        pic.src =  "images/tree-1.jpg";
-      }
-      function originPic(){
-        pic.src = "images/tree-1-thumb.jpg";
-      }
+    pic2.addEventListener("mouseover", bigPic2, false);
+    pic2.addEventListener("mouseout", originPic2, false);
 
-    </script>
-  </body>
+    pic3.addEventListener("mouseover", bigPic3, false);
+    pic3.addEventListener("mouseout", originPic3, false);
+
+    pic4.addEventListener("mouseover", bigPic4, false);
+    pic4.addEventListener("mouseout", originPic4, false);
+
+    pic5.addEventListener("mouseover", bigPic5, false);
+    pic5.addEventListener("mouseout", originPic5, false);
+
+    pic6.addEventListener("mouseover", bigPic6, false);
+    pic6.addEventListener("mouseout", originPic6, false);
+
+
+    //클릭시 하단의 이미지가 변경 되어야 하는 기능
+    function bigPic() {
+      box.src = "images/tree-1.jpg";
+    }
+    function originPic() {
+      box.src = none;
+    }
+
+    function bigPic2() {
+      box.src = "images/tree-2.jpg";
+    }
+    function originPic2() {
+      box.src = none;
+    }
+
+    function bigPic3() {
+      box.src = "images/tree-3.jpg";
+    }
+    function originPic3() {
+      box.src = none;
+    }
+
+    function bigPic4() {
+      box.src = "images/tree-4.jpg";
+    }
+    function originPic4() {
+      box.src = none;
+    }
+
+    function bigPic5() {
+      box.src = "images/tree-5.jpg";
+    }
+    function originPic5() {
+      box.src = none;
+    }
+
+    function bigPic6() {
+      box.src = "images/tree-6.jpg";
+    }
+    function originPic6() {
+      box.src = none;
+    }
+    
+
+
+
+  </script>
+</body>
+
 </html>
