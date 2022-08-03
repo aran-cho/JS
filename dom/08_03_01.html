@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+        //docunet.querySelector("");
+        //태그 선택자
+        const h1 = document.querySelector("h1").style.color = "red";
+
+        //아이디 선택자
+        document.querySelector("#header").style.backgroundColor = "orange";
+
+        //클래스 선택자(class가 두개이상일 경우 (ex- .tt.ss)  띄어쓰기 하지말고 기입)
+        document.querySelector(".tt").style.textAlign = "center";
+
+        //속성 선택자
+        document.querySelector("[type=text]").style.borderRadius = "10px";
+
+        //후손 선택자
+        document.querySelector("body input").style.backgroundColor = "blue";
+        // document.querySelectorAll("body input").style.backgroundColor = "blue"; 한줄로는 작업불가능
+
+        //이벤트리스너(addEventListener) 도움을 받지 않는 한 바디에 작성을 해야지 스타일을 적용할 수 있음 
+        //코드는 순차적으로 진행되기 때문에 바디에 스타일을 적용하려면 바디 먼저 읽어주는 순서로 가야함(하단참고)
+
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header" class="tt">반갑습니다.</h1>  
+    <input type="text">
+    <input>
+
+    <!-- <script>
+        //docunet.querySelector("");
+
+        //태그 선택자
+        // const h1 = document.querySelector("h1");
+        // h1.style.color = red;
+        const h1 = document.querySelector("h1").style.color = "red";
+
+        //아이디 선택자
+        document.querySelector("#header").style.backgroundColor = "orange";
+
+        //클래스 선택자(class가 두개이상일 경우 (ex- .tt.ss)  띄어쓰기 하지말고 기입)
+        document.querySelector(".tt").style.textAlign = "center";
+
+        //속성 선택자
+        document.querySelector("[type=text]").style.borderRadius = "10px";
+
+        //후손 선택자
+        document.querySelector("body input").style.backgroundColor = "blue";
+        // document.querySelectorAll("body input").style.backgroundColor = "blue"; 한줄로는 작업불가능
+
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 이벤트리스너를 사용하면 더 번거롭기때문에 하단에 스크립트 사용 -->
+
+    <title>innerText, innerHTML</title>
+</head>
+<body>
+    <button onclick="inText()">innerText로 표시</button>
+    <button onclick="inHTML()">innerHTML로 표시</button>
+    <div id="current"></div>
+
+    <script>
+
+        const now = new Date();
+
+        function inText(){
+            document.getElementById('current').innerText = now;
+
+        }
+        function inHTML(){
+            document.getElementById('current').innerHTML = "<em>" + now + " </em>";
+        }
+        
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>라이트박스 예제</title>
+    <link rel="stylesheet" href="css/lightbox1.css">
+  </head>
+  <body>
+    <div class="row">
+      <ul>
+        <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic"></li>
+        <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic"></li>
+        <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic"></li> 
+        <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic"></li>
+        <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic"></li>
+        <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>          
+      </ul>    
+    </div>
+
+    <div id="bigBox">
+		<img src="images/tree-1.jpg" alt="" id="bigBoximg">
+    </div>
+
+
+    <script>
+
+      let pic = document.querySelector('.pic');
+
+      pic.addEventListener("mouseover", bigPic, false);
+      pic.addEventListener("mouseout", originPic, false);
+
+      //클릭시 하단의 이미지가 변경 되어야 하는 기능
+      function bigPic(){
+        pic.src =  "images/tree-1.jpg";
+      }
+      function originPic(){
+        pic.src = "images/tree-1-thumb.jpg";
+      }
+
+    </script>
+  </body>
+</html>

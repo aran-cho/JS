@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        //어디에 스크립트를 작성하든 바디에 잘 적용되도록 이벤트리스너 사용
+        //이벤트리스너 document에 예약을 건다.
+        document.addEventListener('DOMContentLoaded', ()=>{
+
+            const a = document.querySelector('#a1');
+            const b = document.querySelector('#a2');
+
+            a.textContent = "<h1>textContent</h1>";
+            b.innerHTML = "<h1>innerHTML</h1>";
+
+        });
+    </script>
+    <title>inner</title>
+</head>
+<body>
+    <div id="a1"></div>
+    <div id="a2"></div>
+</body>
+</html>

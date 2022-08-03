@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>이벤트</title>
+</head>
+<body>
+    <div id="container">
+        <img src="images/cup-1.png" alt="잔" id="cup">
+    </div>
+    
+    <script>
+        let cup = document.querySelector('#cup');
+
+        cup.onclick = function(avent){
+            alert("이벤트 유형 : "+ event.type + ", 이벤트 발생위치 : " + event.pageX + "," + event.pageY);
+            alert("클릭한 이미지 파일 : "+ this.src); //경로 알럿
+        }
+
+        
+    </script>
+</body>
+</html>

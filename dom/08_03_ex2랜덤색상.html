@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>버튼클릭시 색상 랜덤 변경</title>
+</head>
+<body id="wrap">
+<!--아니면 div 에다 아이디 주고 너비높이 설정? -->
+        <button onclick="butt()"> chColor</button>
+    
+    <script>
+
+        function butt(){
+
+            var color=['#ff0', '#6c0', '#fcf','#cf0','#39f'];
+            var input =Math.floor(Math.random() * color.length);
+
+            document.getElementById("wrap").style.backgroundColor = color[input];
+
+        }
+    </script>
+
+
+<!-- 선생님 답안 -->
+<!-- <script>
+var color=['#ff0', '#6c0', '#fcf','#cf0','#39f'];
+var i =0;
+
+function changColor(){
+    i++;
+    if(i>=color.length)//i의 값이 5이상이면 i에 0을 대입시켜라.
+    i = 0;
+
+    var bodyTag = document.getElementById("theBody");
+    bodyTag.style.backgroundColor = color[i];
+    // 문서객체.style.스타일속성 =값
+} -->
+</script>
+</body>
+</html>

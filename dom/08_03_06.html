@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>이벤트</title>
+</head>
+<body>
+    <div>
+        <img src="images/easys-1.jpg" alt="여자아이" id="cover">
+    </div>
+
+    <script>
+        let cover = document.querySelector('#cover');
+        //cover.addEventListener(이벤트, 함수명, 캡처 여부);
+        // 캡처여부 = false(기본)와 true
+        cover.addEventListener("mouseover", changeImg, false);
+        cover.addEventListener("mouseout", originImg);
+
+        function changeImg(){
+            cover.src = "images/easys-2.jpg"
+        }
+        
+        function originImg(){
+            cover.src = "images/easys-1.jpg"
+        }
+    </script>
+</body>
+</html>
