@@ -47,12 +47,19 @@
 
         let hideBt = document.querySelector('.popup>#notice');
 
-        hideBt.addEventListener('click', function hide(){
+        // hideBt.addEventListener('click', function hide(){
+        // document.querySelector('.popup').style.dispaly = 'none';
+        // document.querySelector('body').style.backgroundColor = 'white';
+
+        // });
+
+        hideBt.addEventListener('click',hide, false);
+        
+        function hide(){
         document.querySelector('.popup').style.dispaly = 'none';
         document.querySelector('body').style.backgroundColor = 'white';
-
-        });
-
+        }
+        
         //함수 밖으로 빼기
 
         //let a = dou

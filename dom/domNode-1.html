@@ -2,13 +2,46 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <style>
+
+    #container {
+      width: 500px;
+      margin: 10px auto;
+      padding: 20px;
+    }
+    #info{
+      margin-top: 20px;
+    }
+
+  </style>
   <title>DOM</title>
 </head>
 <body>
   <div id="container">    
     <h1>DOM을 공부합시다</h1>
-    <a href="#">더 보기</a>    
-    <div id="info"></div>
+    <a href="#" onclick="more(); this.onclick='';">더 보기</a>    
+    <!-- this.onclick=''; 노드 하나만 추가하려고 제어 -->
+    <div id="info"><!-- 넣어서 표시하고자 하는 위치 --> </div>
   </div>
+
+  <script>
+    function more(){
+
+      // <div id="info">
+      //   <p>DOM은 Documetn Object Model의 줄임말이다.</p>
+      // </div> 
+
+      let newP = document.createElement('p'); //요소노드추가
+      let txtNode = document.createTextNode('DOM은 Documetn Object Model의 줄임말이다.');//p안의 글자(노드)추가
+
+      newP.appendChild(txtNode); //자식 txtNode를 부모 newP로 연결
+      //txtNode랑 newP랑 연결하는 코드 (부모자식으로)
+
+      document.querySelector('#info').appendChild(newP);
+      //newP(자식)랑 info(부모)를 연결(상위개념)
+
+
+    }
+  </script>
 </body>
 </html>
