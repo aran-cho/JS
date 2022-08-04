@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #wrap{
+            width: 400px;
+            margin: 50px auto;
+            text-align: center;
+        }
 
+        #rect{
+            width: 150px;
+            height: 150px;
+            border: solid 1px #333;
+            margin: 30px auto;
+            transition: 1s; /* 변형속도 */
+        }
+
+    </style>
     <title>사각에서 원형</title>
 </head>
+
 <body>
+
     <div id="wrap">
         <p>도형 위에 마우스 포인터를 올려놓으세요.</p>
         <div id="rect"></div>
     </div>
+
+    <script>
+
+        let myRect = document.querySelector('#rect');
+
+        myRect.addEventListener('mouseover', function(){ //mouseover 이벤트 처리 
+            myRect.style.borderRadius = '50%'; 
+            myRect.style.backgroundColor = 'pink';
+        })
+
+        myRect.addEventListener('mouseout', function(){ //mouseout 이벤트 처리
+            myRect.style.borderRadius = '';
+            myRect.style.backgroundColor = '';
+        })
+
+    </script>
+
 </body>
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body{
+            background-color: rgb(194, 194, 194);
+        }
+        #notice{
+            margin: 60px;
+            padding: 20px;
+            background-color: white;
+            width: 280px;
+            height: 260px;
+            position: relative;
+        }
+
+        button{
+            position: absolute;
+            bottom:20px;
+            right:20px;
+        }
+
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <p>문서를 열면 팝업 창이 표시됩니다.</p>
+    <div class = "popup" id="notice">
+        <h1>공지사항</h1>
+        <ul>
+            <li>공지사항 내용</li>
+            <li>공지사항 내용</li>
+            <li>공지사항 내용</li>
+            <li>공지사항 내용</li>
+            <li>공지사항 내용</li>
+        </ul>
+        <button onclick="hide()">닫기</button>
+    </div>
+
+    <script>
+
+        let hideBt = document.querySelector('.popup>#notice');
+
+        hideBt.addEventListener('click', function hide(){
+        document.querySelector('.popup').style.dispaly = 'none';
+        document.querySelector('body').style.backgroundColor = 'white';
+
+        });
+
+        //함수 밖으로 빼기
+
+        //let a = dou
+        // let hideBt = document.querySelector('#notice');
+
+        // hideBt.addEventListener('click', hideA, false);
+        // function hideA(){
+        //     hideBt = none;
+        // }
+    </script>
+
+</body>
+</html>
