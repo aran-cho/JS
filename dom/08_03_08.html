@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>글자 크기 확대 축소</title>
+</head>
+<body>
+    <button onclick="zoomIn()">글자 확대</button>
+    <button onclick="zoomOut()">글자 축소</button>
+    <button onclick="colorA()">글자 색상</button>
+    <!-- <button onclick="colorB()">글자 색상</button> -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis dolor leo. Morbi a mi velit. Cras in iaculis leo. Integer mattis elementum lacus, ut viverra velit viverra at. Phasellus aliquam massa a eros bibendum, eget tincidunt metus rutrum. Duis lacinia nunc nibh, eget aliquam erat tincidunt eu. Suspendisse at rhoncus quam. Vivamus ornare sit amet mauris ut molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam molestie consequat neque. Praesent sit amet faucibus ipsum.</p>
+
+    <script>
+        let num = 16;
+        function zoomIn(){
+            num++;
+
+            let body = document.querySelector('body');
+            body.style.fontSize = num +'px';
+
+        }
+
+        function zoomOut(){
+            if (num>1){
+            num--;
+
+            let body = document.querySelector('body');
+            body.style.fontSize = num + 'px';
+            }
+        }
+
+        //한가지 색상
+        function colorA(){
+            let color = 'red';
+
+            document.querySelector('body').style.color = color;
+        }
+
+        // 랜덤 색상
+        // function colorB(){
+        //     let color = ['#ff0', '#6c0', '#fcf','#cf0','#39f']
+
+        //     let input = Math.floor(Math.random() * color.length);
+
+        //     document.querySelector('body').style.color = color[input];
+        // }
+
+    </script>
+</body>
+</html>
