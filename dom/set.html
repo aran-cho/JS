@@ -86,10 +86,15 @@
 
 			let ulN = document.createElement('ul');
 			// for(let i =0; i<li.length; i++){
-			// 	// let li = ['원산지 : 에디오피아', '지 역 : 이르가체프 코체레', '농 장 : 게뎁', '고 도 : 1,950 ~ 2,000 m', '품 종 : 지역 토착종', '가공법 : 워시드'];
+			// let li = ['원산지 : 에디오피아', '지 역 : 이르가체프 코체레', '농 장 : 게뎁', '고 도 : 1,950 ~ 2,000 m', '품 종 : 지역 토착종', '가공법 : 워시드'];
 			// 	document.querySelector("ul").innerText = li[0];
 			// }
-			let txtNodeLi = document.createElement('li');
+			let txtNodeLi1 = document.createElement('li');
+			let txtNodeLi2 = document.createElement('li');
+			let txtNodeLi3 = document.createElement('li');
+			let txtNodeLi4 = document.createElement('li');
+			let txtNodeLi5 = document.createElement('li');
+			let txtNodeLi6 = document.createElement('li');
 			// let txtNodeL1 = document.createTextNode(li[0]);
 			let txtNodeL1 = document.createTextNode('원산지 : 에디오피아');
 			let txtNodeL2 = document.createTextNode('지역 : 이르가체프 코체레');
@@ -97,13 +102,19 @@
 			let txtNodeL4 = document.createTextNode('고 도 : 1,950 ~ 2,000 m');
 			let txtNodeL5 = document.createTextNode('품 종 : 지역 토착종');
 			let txtNodeL6 = document.createTextNode('가공법 : 워시드');
-			ulN.appendChild(txtNodeLi);
-			txtNodeLi.appendChild(txtNodeL1);
-			txtNodeLi.appendChild(txtNodeL2);
-			txtNodeLi.appendChild(txtNodeL3);
-			txtNodeLi.appendChild(txtNodeL4);
-			txtNodeLi.appendChild(txtNodeL5);
-			txtNodeLi.appendChild(txtNodeL6);
+		
+			txtNodeLi1.appendChild(txtNodeL1);
+			txtNodeLi2.appendChild(txtNodeL2);
+			txtNodeLi3.appendChild(txtNodeL3);
+			txtNodeLi4.appendChild(txtNodeL4);
+			txtNodeLi5.appendChild(txtNodeL5);
+			txtNodeLi6.appendChild(txtNodeL6);
+			ulN.appendChild(txtNodeLi1);
+			ulN.appendChild(txtNodeLi2);
+			ulN.appendChild(txtNodeLi3);
+			ulN.appendChild(txtNodeLi4);
+			ulN.appendChild(txtNodeLi5);
+			ulN.appendChild(txtNodeLi6);
 
 
 
@@ -139,19 +150,6 @@
 			document.querySelector('#view').appendChild(newN);
 
 
-			
-			// let hrN = document.createElement('hr');
-			// let h2N = document.createElement('h2');
-			// let ulN = document.createElement('ul');
-			// let h3N = document.createElement('h3');
-			// let pN = document.createElement('p');
-
-			// newN.appendChild(hrN);
-			// newN.appendChild(h2N);
-			// newN.appendChild(ulN);
-			// newN.appendChild(h3N);
-			// newN.appendChild(pN);
-			// document.querySelector('#view').appendChild(newN);
 
 
 			// 한번 클릭하면 더이상 추가안되는 기능 추가 this.onclick='';
