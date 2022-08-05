@@ -27,6 +27,7 @@
   <script>
     function more(){
 
+//텍스트노드 추가(appendChild 사용)
       // <div id="info">
       //   <p>DOM은 Documetn Object Model의 줄임말이다.</p>
       // </div> 
@@ -36,9 +37,23 @@
 
       newP.appendChild(txtNode); //자식 txtNode를 부모 newP로 연결
       //txtNode랑 newP랑 연결하는 코드 (부모자식으로)
-
       document.querySelector('#info').appendChild(newP);
       //newP(자식)랑 info(부모)를 연결(상위개념)
+
+//이미지노드 추가(setAttributeNode 사용)
+      let newImg = document.createElement('img'); //이미지 요소 노드 추가
+      let srcNode = document.createAttribute('src'); //src 속성 노드 추가
+      let altNode = document.createAttribute('alt'); //alt 속성 노드 추가
+
+      srcNode.value = 'images/dom.jpg'; //src 값 설정
+      altNode.value = '돔 트리 구조 이미지'; //alt 값 설정
+
+      
+      newImg.setAttributeNode(srcNode);
+      //설정을 할 수 있음
+      newImg.setAttributeNode(altNode);
+      document.querySelector('#info').appendChild(newImg);
+      //이미지의 경우 설정을(setAttributeNode) 통해 자식노드를 부모노드에 연결 할 수 있음
 
 
     }

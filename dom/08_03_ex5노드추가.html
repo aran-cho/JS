@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>h1으로 텍스트 노드 추가</title>
+</head>
+<body>
+<div></div>
+<script>
+    
+    let newP = document.createElement('h1');
+    let txtNode = document.createTextNode('문서 객체 동적으로 생성하기');
+
+    newP.appendChild(txtNode);
+    document.querySelector('div').appendChild(newP);
+
+    let h1 = document.querySelector('h1');
+    h1.style.backgroundColor = 'black';
+    h1.style.color = 'white';
+    h1.style.padding = '5px';
+
+</script>
+</body>
+</html>
