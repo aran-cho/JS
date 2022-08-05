@@ -67,6 +67,26 @@
 	</div>
 
 	<script>
+		//이미지
+		let pic1 = document.querySelector('#small-pic:nth-child(1)');
+		// let pic2 = document.querySelector('#small-pic:nth-child(2)');
+		// let pic3 = document.querySelector('#small-pic:nth-child(3)');
+		let box = document.querySelector('#cup');
+
+		pic1.addEventListener("click", function(){
+			box.src= "images/coffee-blue.jpg";
+		});
+
+		// pic2.addEventListener("click", function(){
+		// 	box.src= "images/coffee-blue.jpg";
+		// })
+
+		// pic3.addEventListener("click", function(){
+		// 	box.src= "images/coffee-gray.jpg";
+		// })
+
+
+		//상세설명
 		let detailW = document.querySelector('#view');
 
 		detailW.addEventListener('click', detailA);
