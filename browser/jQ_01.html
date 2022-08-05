@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <script src="js.js"></script>
+    <!-- 링크를 걸거나, 위와 같이 파일을 가져오거나 -->
+    <script>
+        //작업하기전에 제이쿼리 사용하기전에 바디 먼저 불러와서 사용하겠다는 약속(문법)
+        $(function(){
+            $('h1').css('color', 'red');
+            $('h2').css('background-color', 'orange');
+            $('h2').next().css("border","solid 1px green");
+
+            let style = {
+                'background-color' : 'skyblue', 
+                'border' :'2px solid #f00'
+            }
+            $(".tt").css(style);
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="tt">
+    <h1>제이쿼리</h1>
+    <h2>선택자</h2>
+    <h3>직접선택자</h3>
+    </div>
+</body>
+</html>

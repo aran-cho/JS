@@ -36,18 +36,25 @@
 
 	<script>
 
-		let click = document.querySelector('li');
-		// let click1 = document.querySelector('ul:second-child');
+		let click = document.querySelectorAll('.check');
+		// let click1 = document.querySelector('ul:second-child'); 가상셀렉터 왜 안되는지,,,
 
-		click.addEventListener('click', ()=>{
-			click.style.color = '#ccc';
-			click.style.textDecoration = 'line-through';
+		for(let i =0; i<click.length; i++){ //click.length=5
+		click[i].addEventListener('click', function(){
+			this.style.color = '#ccc';
+			this.parentNode.style.color = '#ccc';
+			this.parentNode.style.textDecoration = 'line-through';
 		});
 
-		// click1.addEventListener('click', ()=>{
-		// 	click1.style.color = '#ccc';
-		// 	click1.style.textDecoration = 'line-through';
+		// click[i].addEventListener('click', ()=>{
+		// 	this.style.color = '#ccc';
+		// 	this.parentNode.style.color = '#ccc';
+		// 	this.parentNode.style.textDecoration = 'line-through';
 		// });
+		//arrow function 
+
+	}
+
 
 	</script>
 </body>
