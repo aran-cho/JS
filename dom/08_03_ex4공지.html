@@ -31,7 +31,7 @@
 <body>
 
     <p>문서를 열면 팝업 창이 표시됩니다.</p>
-    <div class = "popup" id="notice">
+    <div id="notice">
         <h1>공지사항</h1>
         <ul>
             <li>공지사항 내용</li>
@@ -40,35 +40,30 @@
             <li>공지사항 내용</li>
             <li>공지사항 내용</li>
         </ul>
-        <button onclick="hide()">닫기</button>
+        <button>닫기</button>
     </div>
 
     <script>
 
-        let hideBt = document.querySelector('.popup>#notice');
+        let hideBt = document.querySelector('button');
 
-        // hideBt.addEventListener('click', function hide(){
-        // document.querySelector('.popup').style.dispaly = 'none';
-        // document.querySelector('body').style.backgroundColor = 'white';
-
-        // });
-
-        hideBt.addEventListener('click',hide, false);
-        
-        function hide(){
-        document.querySelector('.popup').style.dispaly = 'none';
+        hideBt.addEventListener('click', function(){
+            
+        document.querySelector('#notice').style.display = 'none';
         document.querySelector('body').style.backgroundColor = 'white';
-        }
+
+        });
+
+        // hideBt.addEventListener('click', hide);
         
+        // function hide(){
+        //     document.getElementById('notice').style.display = "none";
+        //     document.querySelector('body').style.backgroundColor = 'white';
+        // }
+
         //함수 밖으로 빼기
 
-        //let a = dou
-        // let hideBt = document.querySelector('#notice');
-
-        // hideBt.addEventListener('click', hideA, false);
-        // function hideA(){
-        //     hideBt = none;
-        // }
+       
     </script>
 
 </body>
