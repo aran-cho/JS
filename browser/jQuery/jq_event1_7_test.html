@@ -3,9 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title> 이벤트 </title>  
-<script src="js/jquery.js"></script>
+<script src="../js.js"></script>
 <script>
 $(function( ) {
+	
+	$('#box_1').mouseout(function(){
+		$('#box_1').css({'background-color':'yellow'});
+	});
+	
+	$('#box_2').on({
+		'mouseleave':function(){
+			$('#box_2').css({'background-color':'pink'});
+		}
+	});
 
 });
 </script>
