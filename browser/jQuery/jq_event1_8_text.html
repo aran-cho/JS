@@ -2,18 +2,26 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title> 이벤트 </title>  
+<title> 이벤트 좌표</title>  
 <script src="../js.js"></script>
 <script>
 $(function(){
-
+	$(document).on('mousemove', function(e){
+		$('.posX').text(e.pageX);
+		$('.posY').text(e.pageY);
+	});
+	// $(document).on('mousemove', function(x,y){
+	// 	var x = $('.posX').pageX();
+	// 	var y = $('.posY').pageX();
+	// 	$('span').text(x,y);
+	// });
 });
 </script>
 </head>
 <body>
 	<h1>mousemove</h1>
-	<p>X : <spans class="posX">0</span></p>
-	<p>Y : <spans class="posX">0</span></p>
+	<p>X : <span class="posX">0</span></p>
+	<p>Y : <span class="posY">0</span></p>
 </body>
 
 </html>

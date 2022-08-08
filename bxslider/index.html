@@ -1,0 +1,33 @@
+<html>
+<head>
+
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider({
+        auto: true, // 슬라이드 자동 실행여부(갤러리가 자동으로 넘어가짐, 기본이 false)
+        mode: 'fade', //슬라이드 방향설정 기본값-horizontal, vertical, fade 
+        // 색상이나 높이값은 css에서 지정해줘서 정리)
+
+      });
+    });
+  </script>
+
+</head>
+<body>
+<div id="wrap">
+    <ul class="slider">
+        <li><img src="img/photo1.jpeg" alt="풍경"></li>
+        <li><img src="img/photo2.jpeg" alt="풍경"></li>
+        <li><img src="img/photo3.jpeg" alt="풍경"></li>
+        <li><img src="img/photo4.jpeg" alt="풍경"></li>
+        <li><img src="img/photo5.jpeg" alt="풍경"></li>
+        <li><img src="img/photo6.jpeg" alt="풍경"></li>
+    </ul>
+    <div>I am another slide.</div>
+</div>
+</body>
+</html>
