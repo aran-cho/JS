@@ -11,6 +11,9 @@
  *
  * Date: 2021-03-02T17:08Z
  */
+
+//홈페이지에서 가져와야함
+
 ( function( global, factory ) {
 
 	"use strict";
