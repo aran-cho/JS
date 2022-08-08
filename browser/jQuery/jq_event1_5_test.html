@@ -3,14 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <title> 이벤트 </title>  
-<script src="js/jquery.js"></script>
+<script src="../js.js"></script>
 <script>
 $(function( ) {
+
+	$('.btn1').on('click',function(e){
+		e.preventDefault(); //버튼 눌렀을때 링크 넘어가지않음
+		$('.txt1').css({'background-color':'#ff0'});
+	});
+
+	$('.btn2').on('click',function(){
+		$('.txt2').css({'background-color':'#ff0'});
+	});
+
+	$('.btn3').dblclick(function(){
+		$('.txt3').css('background','green');
+	});
+	// == $('.btn3').dblclick(function(){
+	// 	$('.btn3').parent().next().css('background','green');
+	// });
+
 
 });
 </script>
 </head>
 <body>
+	<!-- 
+		1)버튼 눌렀을때 하단의 텍스트만 스타일 변경
+		2)버튼 눌렀을때 링크로 넘어가고 하단의 텍스트 스타일 변경
+		3)버튼 더블 클릭했을때 하단의 텍스트 스타일 변경
+	-->
 	<p><a href="http://www.easyspub.co.kr/" class="btn1">버튼1</a></p>
 	<p class="txt1">내용1</p>
 	<p><a href="http://www.easyspub.co.kr/" class="btn2">버튼2</a></p>

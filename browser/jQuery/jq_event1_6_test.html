@@ -3,10 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <title> 이벤트 </title>  
-<script src="js/jquery.js"></script>
+<script src="../js.js"></script>
 <script>
-$(function( ) {
-	
+$(function(){
+	//마우스 올렸을때 내렸을때 기능
+	$('.btn1').on({
+		'mouseover focus':function(){
+			$('.txt1').css({'background-color':'gray'});
+		},
+		'mouseout blur':function(){
+			$('.txt1').css({'background-color':'white'});
+		}
+	});
+// ==같은기능
+	$('.btn2').hover(
+	function(){
+		$('.txt2').css({'background-color':'green'});
+	},
+	function(){
+		$('.txt2').css({'background':'none'});
+	}
+	);
+
 });
 </script>
 </head>

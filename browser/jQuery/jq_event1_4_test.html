@@ -2,17 +2,27 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title> 이벤트 </title>  
-<script src="js/jquery.js"></script>
+<title> 이벤트 (이미지)</title>  
+<script src="../js.js"></script>
 <script>
 $(function( ) {
+	// document와 window는 따옴표 안함
+	$(document).ready(function(){
+		var h1 = $('.img1').height();
+		console.log("ready:", h1);
+	});
+	// $(window).load(function(){
+	// 	var h2 = $('.img1').height();
+	// 	console.log("load:", h2);
+	// });
 
 });
 </script>
 </head>
 <body>
 	<p>
-		<img src="http://place-hold.it/300X300" class="img1">
+		<img src="http://placehold.co/600x400/green/ffffff" class="img1">
+		<!-- ff0000/ffffff : 배경색/글자색 -->
 	</p>
 </body>
 </html>
