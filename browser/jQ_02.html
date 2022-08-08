@@ -8,6 +8,7 @@
 
     <script>
         $(function(){
+            
             $('.wrap_1').css('border', 'solid 1px orange');
 
             //직접선택자
@@ -43,7 +44,9 @@
             //범위 맨아래 추가
             $('.wrap_1').append('<p>추가 요소로 처리</p>');
 
-            
+            $('.wrap_3 p').wrapInner('<strong />');
+            //볼드체
+
         });
     </script>
 
