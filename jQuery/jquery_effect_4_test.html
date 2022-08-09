@@ -3,11 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <title> 효과와 애니메이션 </title>  
-<script src="js/jquery.js"></script>
+<script src="../browser/js.js"></script>
 <script>
 $(function(){
+	$('p').on('mouseover', function(){
+		$('.txt1').animate({marginLeft: '50px'},1000);
+		$('.txt1').animate({marginTop: '50px'},1000);
+		$('.txt1').animate({marginLeft: '0'},1000);
+		$('.txt1').animate({marginTop: '0'},1000);
+	});
 	
 });
+
 </script>
 <style>
 	*{margin:0;}

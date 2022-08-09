@@ -3,10 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <title> 효과와 애니메이션 </title>  
-<script src="js/jquery.js"></script>
+<script src="../browser/js.js"></script>
 <script>
 $(function(){
-
+	$('.btn1').on('click', function(){
+		$('.txt1').animate({
+			marginLeft:'500px', 
+			fontSize: '30px'
+			//조건은 세미콜론아니고 쉼표사용
+		}, 
+		2000, function(){
+			alert('모션완료!');
+		});
+	});
+	$('.btn2').on('click', function(){
+		$('.txt2').animate({marginLeft: '+=50px'},1000);
+		//+= 누적
+		//큐에 저장되기때문에 누르고 떼도 누른 횟수만큼 작동함
+	});
+	
 });
 </script>
 <style>

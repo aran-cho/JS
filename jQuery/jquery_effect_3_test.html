@@ -3,10 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title> 효과와 애니메이션 </title>  
-<script src="js/jquery.js"></script>
+<script src="../browser/js.js"></script>
 <script>
 $(function(){
-
+	$('.txt1').animate({marginLeft:'400px'},1000);
+	$('.txt2').delay(3000).animate({marginLeft:'400px'},1000);
+	
+	$('.btn1').on('click',move);
+	function move(){
+		$('.txt3').animate({marginLeft: '+=50px'}, 800);
+		$('.txt4').animate({marginLeft: '+=50px'}, 800);
+		$('.txt4').stop();
+		$('.txt5').stop(true, true).animate({marginLeft: '+=50px'}, 800);
+		//손을 떼는 순간 큐에 저장된것이 사라짐
+	};
 });
 </script>
 <style>
