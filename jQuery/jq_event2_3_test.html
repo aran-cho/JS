@@ -2,11 +2,14 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title> 이벤트 </title>  
+<title> 이벤트 셀렉트</title>  
 <script src="../browser/js.js"></script>
 <script>
 $(function(){
-
+	//change사용
+	$('#rel_site').on('change', function(){
+		$('.txt').text($(this).val());
+	});
 });
 </script>
 </head>
