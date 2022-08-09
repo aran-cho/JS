@@ -2,11 +2,25 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title> 이벤트 </title>  
+<title> 이벤트 focus / blur</title>  
 <script src="../browser/js.js"></script>
 <script>
 $(function(){
+	$('#user_id_1','#user_pw_1').on('focus', function(){
+		$(this).css({'background-color':'pink'});
+	});
 
+	$('#user_id_1','#user_pw_1').on('blur', function(){
+		$(this).css({'background-color':'none'});
+	});
+
+	$('#frm_2').on('focusin', function(){
+		$(this).css({'background-color':'pink'});
+	});
+
+	$('#frm_2').on('focusout', function(){
+		$(this).css({'background-color':'none'});
+	});
 });
 </script>
 </head>

@@ -2,11 +2,23 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title> 이벤트 </title>  
+<title> 이벤트 버튼 텍스트</title>  
 <script src="../browser/js.js"></script>
 <script>
 $(function(){
-	
+	$('#btn1').on('mouseover',function(){
+		$('.txt').text('Javascript');
+	});
+	$('#btn2').on('mouseover',function(){
+		$('.txt').text('Welcome');
+	});
+
+	$('#btn1, #btn2').on('mouseout',function(){
+		// $('.txt').text('');
+		$('.txt').empty();
+		//선택한 요소의 내용만 지울뿐 요소(태그)는 남아있다는 것을 주의
+		//클래스를 삭제한다면(removeclass) 요소(태그)가 삭제
+	});
 });
 </script>
 </head>
