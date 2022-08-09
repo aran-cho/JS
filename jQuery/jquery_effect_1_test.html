@@ -2,10 +2,39 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title> 효과와 애니메이션 </title>  
-<script src="js/jquery.js"></script>
+<title> 효과와 애니메이션 토글 </title>  
+<script src="../browser/js.js"></script>
 <script>
 $(function( ) {
+	$('.btn2').hide(); //버튼이 보이지 않음
+
+	//1번버튼 감추고(hide) 2번버튼 보이기(show)
+	$('.btn1').on('click', function(){
+		$('.box').slideUp(1000,function(){
+			$('.btn1').hide();
+			$('.btn2').show();
+		});
+	});
+
+	$('.btn2').on('click', function(){
+		
+		$('.box').fadeIn(1000, function(){
+			$('.btn2').hide();
+			$('.btn1').show();
+		});
+	});
+
+	$('.btn3').on('click', function(){
+		$('.box').slideToggle();
+	});
+
+	$('.btn4').on('click', function(){
+		$('.box').fadeTo('fast',0.3); // 속도랑 투명도
+	});
+	
+	$('.btn5').on('click', function(){
+		$('.box').fadeTo('fast',1); 
+	});
 
 });
 </script>
@@ -35,3 +64,7 @@ $(function( ) {
 	</div>
 </body>
 </html>
+
+
+
+
