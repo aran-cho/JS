@@ -3,10 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <title> 이벤트 </title>  
-<script src="js/jquery.js"></script>
+<script src="../browser/js.js"></script>
 <script>
 $(function(){
+	$('.menuWrap_1 a').on('mouseover',function(){
+		$(this).css({'background-color':'yellow'});
+	});
+	$('.menuWrap_1 a').on('mouseout',function(){
+		$(this).css({'background-color':'white'});
+	});
+	
+	// == $('.menuWrap_1 li a').on('click',function(){
+	//	$('.menuWrap_1 li a').css({'background-color':'white'});
+	// 	$(this).css({'background-color':'yellow'});
+	// });
 
+	$('.menuWrap_2  li a').on('click',function(){
+		$('.menuWrap_2 li a').css({'background-color':'white'});
+		$(this).css({'background-color':'yellow'});
+
+		$('.idxNum').text($('.menuWrap_2  li a').index(this));
+	});
 });
 </script>
 </head>
@@ -22,7 +39,9 @@ $(function(){
 				<li><a href="#">메뉴4</a></li>
 				<li><a href="#">메뉴5</a></li>
 				<li><a href="#">메뉴6</a></li>
-</ul>
+				<li><a href="#">메뉴7</a></li>
+				<li><a href="#">메뉴8</a></li>
+</ul8>
 <p class="idxNum"></p>
 </body>
 </html>

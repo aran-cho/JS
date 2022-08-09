@@ -2,10 +2,31 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title> 이벤트 </title>  
-<script src="js/jquery.js"></script>
+<title> 이벤트 해지</title>  
+<script src="../browser/js.js"></script>
 <script>
 $(function(){
+	
+	$('.btn_1').on('click', function(){
+		alert('HELLO~!');
+	});
+
+	let btn_2 = $('<p><button class="btn_2">버튼2</button></p>');
+	$('#wrap').append(btn_2);
+
+	$('.btn_2').on('click', function(){
+		alert('I WANT TO GO TO 오봉집');
+	});
+	// == $(document).on('click', '.btn_2' ,function(){
+	// 	alert('I WANT TO GO TO 오봉집');
+	// });
+
+	$('.del_1').on('click', function(){
+		$('.btn_1').off('click');
+	});
+	$('.del_2').on('click', function(){
+		$('.btn_2').off('click');
+	});
 
 });
 </script>
@@ -13,6 +34,7 @@ $(function(){
 <body>
 <div id="wrap">
 	<p><button class="btn_1">버튼1</button></p>
+	<!-- <p><button class="btn_2">버튼2</button></p> -->
 </div>
 <p>
 	<button class="del_1">버튼1 이벤트 해지</button> 

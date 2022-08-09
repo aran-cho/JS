@@ -2,11 +2,32 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title> 이벤트 </title>  
-<script src="js/jquery.js"></script>
+<title> 이벤트 탭사용(아스키코드)</title>  
+<script src="../browser/js.js"></script>
 <script>
 $(function(){
+	$(document).on('keydown', keyEnter);
+	//keyEnter 함수명
 
+	function keyEnter(i){
+		var direct = "";
+
+		switch(i.keyCode){
+		//keyCode : 아스키코드 활용
+		case 37 : direct = 'LEFT';
+		break;
+		case 38 : direct = 'TOP';
+		break;
+		case 39 : direct = 'RIGHT';
+		break;
+		case 40 : direct = 'BOTTOM';
+		break;
+		}
+		
+		if(direct){
+			$('#user_id').val(direct);
+		}
+	}
 });
 </script>
 </head>
