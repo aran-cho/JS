@@ -9,8 +9,34 @@
 <script>
 
 $(function(){
+	// $('.btn1').on('click', function(){
+	// 	$('.wrap').css({'display':'none'});
+	// });
+
+	/* $('.btn1').on('click', function(){
+		$('.wrap').slideUp(1000, function(){ 
+			//1초동안 진행
+			//공간을 잡아줘야지 밑으로 내려가는게 사라짐
+			$('.btn1').text('노출'); 
+		});
+	}); */
+
+	$('.btn1').on('click', function(){
+		let ts = $(this);
+		//변수 선언안해도 상관은 없음
+		if(ts.text() == '숨김'){
+			$('.wrap').slideUp(1000, function(){ 
+			$('.btn1').text('노출'); 
+		});
+		} else {
+			$('.wrap').slideDown(1000, function(){ 
+			$('.btn1').text('숨김'); 
+		});
+		}
 	
 });	
+});	
+
 
 </script>
 	
