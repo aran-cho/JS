@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 개인 포트폴리오 </title>  
+<!-- <script src="../browser/js.js"></script>
+<script>
+$(function(){
+
+   
+});
+
+</script> -->
+</head>
+<body>
+	<div id="wrap">
+        <header>
+            <h1><a href="#">LOGO</a></h1>
+
+            <ul id="gnb">
+                <li>
+                    <a href="#">소개</a> 
+
+                    <div class="snb">
+                        <ul>
+                            <li><a href="#">menu1-1</a></li>
+                            <li><a href="#">menu1-2</a></li>
+                            <li><a href="#">menu1-3</a></li>
+                            <li><a href="#">menu1-4</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#">기록</a> 
+                    <div class="snb">
+                        <ul>
+                            <li><a href="#">menu2-1</a></li>
+                            <li><a href="#">menu2-2</a></li>
+                            <li><a href="#">menu2-3</a></li>
+                            <li><a href="#">menu2-4</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#">To do list</a> 
+                    <div class="snb">
+                        <ul>
+                            <li><a href="#">menu3-1</a></li>
+                            <li><a href="#">menu3-2</a></li>
+                            <li><a href="#">menu3-3</a></li>
+                            <li><a href="#">menu3-4</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+
+            <ul id="util">
+                <li>login</li>
+                <li>join</li>
+            </ul>
+        </header>
+        <section>
+
+        </section>
+        <article>
+
+        </article>
+        <footer>
+
+        </footer>
+
+    </div>
+
+    <script>
+        
+        let gnb = document.querySelectorAll('#gnb>li');
+        let gnbElement = document.querySelector('#gnb');
+
+        for(let i = 0; i<gnb.length; i++){
+            gnb[i].addEventListener('mouseover', ()=>{
+                gnbElement.classList.add('on');
+            });
+        }
+        let headElement = document.querySelector('header');
+        headElement.addEventListener('mouseover', (e)=>{
+            if(e.target.id == 'gnb'){
+                gnbElement.classList.remove('on');
+            }
+        })
+
+    </script>
+
+</body>
+</html>
