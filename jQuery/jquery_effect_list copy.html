@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>아코디언 메뉴바</title>
+
+	<script src="../browser/js.js"></script>
+
+	<script>
+
+		$(function () {
+			$('#btn1 a').on('click', function () {
+				$('#btn1').next('ul').filter(':visible').slideUp(); //필터를 이용하여 보이는것을 숨겨라
+
+				$(this).parent().next().slideDown();
+				return false; //기본 이벤트를 차단하여 이동을 막는다.
+			});
+			//이거 다시하기(클릭 :숨김 클릭 : 열림 해야함)
+
+			// 	$('#gnb>#li1>a').on('click', function () {
+			// 		$('.snb1').slideUp(1000, function(){
+			// 			$('.snb1>ul').hide();
+			// 		});
+			// 		$('.snb1').slideDown(1000);
+			// 	});
+			// 	$('#gnb>#li2>a').on('click', function () {
+			// 		$('.snb2').slideUp(1000);
+			// 	});
+			// 	$('#gnb>#li3>a').on('click', function () {
+			// 		$('.snb3').slideUp(1000);
+			// 	});
+
+
+		});
+
+	</script>
+
+</head>
+
+<body>
+	<p id="btn1"><a href="#">이벤트 대상1</a></p>
+	<ul>
+		<li><a href="#">리스트1</a></li>
+		<li><a href="#">리스트2</a></li>
+		<li><a href="#">리스트3</a></li>
+	</ul>
+
+
+	<p id="btn1"><a href="#">이벤트 대상2</a></p>
+	<ul>
+		<li><a href="#">리스트4</a></li>
+		<li><a href="#">리스트5</a></li>
+		<li><a href="#">리스트6</a></li>
+	</ul>
+
+
+	<p id="btn1"><a href="#">이벤트 대상3</a></p>
+	<ul>
+		<li><a href="#">리스트7</a></li>
+		<li><a href="#">리스트8</a></li>
+		<li><a href="#">리스트9</a></li>
+	</ul>
+
+
+</body>
+
+</html>

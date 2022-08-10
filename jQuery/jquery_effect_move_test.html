@@ -12,9 +12,9 @@
 
 			$('.goBtn').on('click', function () {
 
-				if (count <= 10) {
+				if (count < 10) {
 					count++;
-					txt1.stop(true, true).animate({ marginLeft: '+=50px' }, 300);
+					txt1.stop(true, true).animate({ marginLeft: '+=60px' }, 300);
 				}		
 
 			});
@@ -23,7 +23,7 @@
 
 				if(count >1){
 				count--;
-				txt1.stop(true, true).animate({ marginLeft: '-=50px' }, 300);
+				txt1.stop(true, true).animate({ marginLeft: '-=60px' }, 300);
 				}
 		
 			});
