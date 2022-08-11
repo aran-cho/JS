@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="Todolist.css">
-<title> 개인 포트폴리오 </title>  
+
+<title> 개인포트폴리오 </title>  
 </head>
 <body>
 	<div id="wrap">
@@ -12,55 +13,34 @@
 
             <ul id="gnb">
                 <li>
-                    <a href="#">달력</a> 
-
-                    <div class="snb">
-                        <ul>
-                            <li><a href="#">menu1-1</a></li>
-                            <li><a href="#">menu1-2</a></li>
-                            <li><a href="#">menu1-3</a></li>
-                            <li><a href="#">menu1-4</a></li>
-                        </ul>
-                    </div>
+                    <a href="#">달력</a>
+                    <!-- 계절별로 -->
                 </li>
 
                 <li>
-                    <a href="#">기록</a> 
-                    <div class="snb">
-                        <ul>
-                            <li><a href="#">menu2-1</a></li>
-                            <li><a href="#">menu2-2</a></li>
-                            <li><a href="#">menu2-3</a></li>
-                            <li><a href="#">menu2-4</a></li>
-                        </ul>
-                    </div>
+                    <a href="#">기록</a>
                 </li>
 
                 <li>
-                    <a href="#">To do list</a> 
-                    <div class="snb">
-                        <ul>
-                            <li><a href="#">menu3-1</a></li>
-                            <li><a href="#">menu3-2</a></li>
-                            <li><a href="#">menu3-3</a></li>
-                            <li><a href="#">menu3-4</a></li>
-                        </ul>
-                    </div>
+                    <a href="#">할일</a>
                 </li>
 
             </ul>
 
-            <ul id="util">
-                <li>login</li>
-                <li>join</li>
-            </ul>
+            <div id="util">
+                <a href="#">login</a>
+                <button>join</button>
+            </div>
         </header>
-        <section>
 
+        <section>
+            
         </section>
+
         <article>
 
         </article>
+
         <footer>
 
         </footer>
@@ -69,20 +49,20 @@
 
     <script>
         
-        let gnb = document.querySelectorAll('#gnb>li');
-        let gnbElement = document.querySelector('#gnb');
+        // let gnb = document.querySelectorAll('#gnb>li');
+        // let gnbElement = document.querySelector('#gnb');
 
-        for(let i = 0; i<gnb.length; i++){
-            gnb[i].addEventListener('mouseover', ()=>{
-                gnbElement.classList.add('on');
-            });
-        }
-        let headElement = document.querySelector('header');
-        headElement.addEventListener('mouseover', (e)=>{
-            if(e.target.id == 'gnb'){
-                gnbElement.classList.remove('on');
-            }
-        })
+        // for(let i = 0; i<gnb.length; i++){
+        //     gnb[i].addEventListener('mouseover', ()=>{
+        //         gnbElement.classList.add('on');
+        //     });
+        // }
+        // let headElement = document.querySelector('header');
+        // headElement.addEventListener('mouseover', (e)=>{
+        //     if(e.target.id == 'gnb'){
+        //         gnbElement.classList.remove('on');
+        //     }
+        // })
 
     </script>
 
