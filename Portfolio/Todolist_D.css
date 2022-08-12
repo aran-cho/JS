@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Alumni Sans Pinstripe', sans-serif;
-    width: 700px;
+    width: 60rem;
     margin: auto;
 }
 
@@ -39,7 +39,7 @@ header {
     display: flex;
     /* justify-content: space-between;     item들의 사이에 균일한 간격처리 */
     /* box-sizing: border-box;     끝에 join login 안으로 들어옴, borderline으로 처리하는것 */
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -75,11 +75,11 @@ header>#gnb {
 
 #util>button {
     margin: 3px 0;
-    width: 5rem;
-    height: 1.5rem;
+    width: 10rem;
+    height: 3rem;
     border: none;
     border-radius: 5px;
-    font-size: 0.7rem;
+    font-size: 1.5rem;
     background-color: rgb(92, 168, 113);
 }
 
@@ -145,226 +145,18 @@ footer {
     padding: 0.3rem;
 }
 
-/** VARIABLES
-===================================*/
-/** RESET AND LAYOUT
-===================================*/
-#imgwrap {
-    margin: 0 auto;
-    max-width: 60%;
+.slider{
+    display: flex;
+    width: 60rem;
 }
-
-.slider {
-    margin: 0;
-}
-
 .slider>li>img {
-    background-size: cover;
-    width: 20rem;
-    margin: 0 auto;
-    position: relative;
-}
-
-.bx-wrapper {
-    position: relative;
-    margin-bottom: 60px;
-    padding: 0;
-    *zoom: 1;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
-}
-
-.bx-wrapper img {
-    max-width: 100%;
-    display: block;
-}
-
-.bxslider {
-    margin: 0;
-    padding: 0;
-}
-
-ul.bxslider {
-    list-style: none;
-}
-
-.bx-viewport {
-    /*fix other elements on the page moving (on Chrome)*/
-    -webkit-transform: translatez(0);
-}
-
-/** THEME
-  ===================================*/
-.bx-wrapper {
-    -moz-box-shadow: 0 0 5px #ccc;
-    -webkit-box-shadow: 0 0 5px #ccc;
-    box-shadow: 0 0 5px #ccc;
-    border: 5px solid #fff;
-    background: #fff;
-    width: 40rem;
+    width: 10rem;
     height: 20rem;
-    margin-top: 1rem;
+    /* margin: 0 auto; */
+    position: relative;
+    margin: 1rem;
 }
-
-.bx-wrapper .bx-pager,
-.bx-wrapper .bx-controls-auto {
-    position: absolute;
-    bottom: -30px;
-    width: 100%;
-}
-
-/* LOADER */
-.bx-wrapper .bx-loading {
-    min-height: 50px;
-    background: url('images/bx_loader.gif') center center no-repeat #ffffff;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2000;
-}
-
-/* PAGER */
-.bx-wrapper .bx-pager {
-    text-align: center;
-    font-size: .85em;
-    font-family: Arial;
-    font-weight: bold;
-    color: #666;
-    padding-top: 20px;
-}
-
-.bx-wrapper .bx-pager.bx-default-pager a {
-    background: rgb(138, 160, 138);
-    text-indent: -9999px;
-    display: block;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    outline: 0;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-}
-
-.bx-wrapper .bx-pager.bx-default-pager a:hover,
-.bx-wrapper .bx-pager.bx-default-pager a.active,
-.bx-wrapper .bx-pager.bx-default-pager a:focus {
-    background: rgb(10, 45, 10);
-}
-
-.bx-wrapper .bx-pager-item,
-.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
-    display: inline-block;
-    vertical-align: bottom;
-    *zoom: 1;
-    *display: inline;
-}
-
-.bx-wrapper .bx-pager-item {
-    font-size: 0;
-    line-height: 0;
-}
-
-/* DIRECTION CONTROLS (NEXT / PREV) */
-.bx-wrapper .bx-prev {
-    left: 10px;
-    background: url('images/controls.png') no-repeat 0 -32px;
-}
-
-.bx-wrapper .bx-prev:hover,
-.bx-wrapper .bx-prev:focus {
-    background-position: 0 0;
-}
-
-.bx-wrapper .bx-next {
-    right: 10px;
-    background: url('images/controls.png') no-repeat -43px -32px;
-}
-
-.bx-wrapper .bx-next:hover,
-.bx-wrapper .bx-next:focus {
-    background-position: -43px 0;
-}
-
-.bx-wrapper .bx-controls-direction a {
-    position: absolute;
-    top: 50%;
-    margin-top: -16px;
-    outline: 0;
-    width: 32px;
-    height: 32px;
-    text-indent: -9999px;
-    z-index: 9999;
-}
-
-.bx-wrapper .bx-controls-direction a.disabled {
-    display: none;
-}
-
-/* AUTO CONTROLS (START / STOP) */
-.bx-wrapper .bx-controls-auto {
-    text-align: center;
-}
-
-.bx-wrapper .bx-controls-auto .bx-start {
-    display: block;
-    text-indent: -9999px;
-    width: 10px;
-    height: 11px;
-    outline: 0;
-    background: url('images/controls.png') -86px -11px no-repeat;
-    margin: 0 3px;
-}
-
-.bx-wrapper .bx-controls-auto .bx-start:hover,
-.bx-wrapper .bx-controls-auto .bx-start.active,
-.bx-wrapper .bx-controls-auto .bx-start:focus {
-    background-position: -86px 0;
-}
-
-.bx-wrapper .bx-controls-auto .bx-stop {
-    display: block;
-    text-indent: -9999px;
-    width: 9px;
-    height: 11px;
-    outline: 0;
-    background: url('images/controls.png') -86px -44px no-repeat;
-    margin: 0 3px;
-}
-
-.bx-wrapper .bx-controls-auto .bx-stop:hover,
-.bx-wrapper .bx-controls-auto .bx-stop.active,
-.bx-wrapper .bx-controls-auto .bx-stop:focus {
-    background-position: -86px -33px;
-}
-
-/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
-.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
-    text-align: left;
-    width: 80%;
-}
-
-.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
-    right: 0;
-    width: 35px;
-}
-
-/* IMAGE CAPTIONS */
-.bx-wrapper .bx-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: #666;
-    background: rgba(80, 80, 80, 0.75);
-    width: 100%;
-}
-
-.bx-wrapper .bx-caption span {
-    color: #fff;
-    font-family: Arial;
-    display: block;
-    font-size: .85em;
-    padding: 10px;
-}
+/* overflow hidden
+랩을 히든함
+가로사이즈만큼 이미지를 밀어넣음
+버튼을 누를때 50px 민다(animate) */
