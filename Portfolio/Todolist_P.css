@@ -77,7 +77,6 @@ header > #gnb {
     color: white;
     font-family: 'Alumni Sans Pinstripe', sans-serif;
 }
-
 /* section */
 #set{
     margin-top: 2rem;
@@ -107,12 +106,13 @@ img{
     left: 0;
 }
 
+
 /* footer */
 footer{
     display: flex;
     clear: both;
     background: rgb(217, 231, 219);
-    height: 30rem;
+    height: 100%;
 }
 .contact{
     padding: 2rem;
@@ -126,11 +126,12 @@ footer{
     font-size: 1rem;
 }
 .contact >button{
-    background: rgb(14, 14, 35);
+    background: rgb(48, 94, 61);
     color: aliceblue;
     width: 4rem;
     height: 2rem;
     border-radius: 5px;
+    border: none;
     margin-bottom: 30px;
     font-size: 0.5rem;
 }
@@ -141,8 +142,7 @@ footer{
 .follow{
     /* background:rgb(244, 244, 244); */
     padding: 2rem;
-    border: 1px solid;
-    width: 10rem;
+    width: 17rem;
 }
 .follow>h3{
     padding-left: 0.5rem;

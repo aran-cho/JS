@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@1&display=swap');
+
+body {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    width: 700px;
+    margin: auto;
+}
+
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    font: 10px;
+}
+
+/* header */
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    /* 태그 밑줄없애기 */
+    color: #333;
+}
+
+/* 구조화*/
+#wrap {
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 30px;
+    border-bottom: solid 1px #e1e1e1;
+    display: flex;
+    /* justify-content: space-between;     item들의 사이에 균일한 간격처리 */
+    /* box-sizing: border-box;     끝에 join login 안으로 들어옴, borderline으로 처리하는것 */
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+header h1 {
+    padding: 20px 0;
+    margin: 3px 0;
+}
+
+header>#gnb {
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: 1.8rem;
+    left: 1rem;
+    margin: 5px 0;
+}
+
+#gnb>li {
+    margin-right: 1rem;
+}
+
+#util {
+    display: flex;
+    position: relative;
+    /* right: 8rem; */
+    top: 1.8rem;
+}
+
+#util>a {
+    margin: 5px 0;
+    margin-right: 1rem;
+}
+
+#util>button {
+    margin: 3px 0;
+    width: 5rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    background-color: rgb(92, 168, 113);
+}
+
+#util>button>h3>a {
+    color: white;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+
+/* footer */
+footer {
+    display: flex;
+    clear: both;
+    background: rgb(217, 231, 219);
+    height: 100%;
+}
+
+.contact {
+    padding: 2rem;
+    width: 28rem;
+}
+
+.contact>.email,
+.message {
+    border-bottom: solid 1px rgb(186, 185, 185);
+    padding-bottom: 20px;
+    color: gray;
+    margin-bottom: 50px;
+    font-size: 1rem;
+}
+
+.contact>button {
+    background: rgb(48, 94, 61);
+    color: aliceblue;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 30px;
+    font-size: 0.5rem;
+}
+
+.contact>p {
+    font-size: 0.5rem;
+}
+
+.follow {
+    /* background:rgb(244, 244, 244); */
+    padding: 2rem;
+    width: 17rem;
+}
+
+.follow>h3 {
+    padding-left: 0.5rem;
+}
+
+.icons {
+    margin-top: 0.5rem;
+}
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    padding: 0.3rem;
+}
+
+/** VARIABLES
+===================================*/
+/** RESET AND LAYOUT
+===================================*/
+#imgwrap {
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+.slider {
+    margin: 0;
+}
+
+.slider>li>img {
+    background-size: cover;
+    width: 20rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bx-wrapper {
+    position: relative;
+    margin-bottom: 60px;
+    padding: 0;
+    *zoom: 1;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+}
+
+.bx-wrapper img {
+    max-width: 100%;
+    display: block;
+}
+
+.bxslider {
+    margin: 0;
+    padding: 0;
+}
+
+ul.bxslider {
+    list-style: none;
+}
+
+.bx-viewport {
+    /*fix other elements on the page moving (on Chrome)*/
+    -webkit-transform: translatez(0);
+}
+
+/** THEME
+  ===================================*/
+.bx-wrapper {
+    -moz-box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    border: 5px solid #fff;
+    background: #fff;
+    width: 40rem;
+    height: 20rem;
+    margin-top: 1rem;
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+}
+
+/* LOADER */
+.bx-wrapper .bx-loading {
+    min-height: 50px;
+    background: url('images/bx_loader.gif') center center no-repeat #ffffff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+/* PAGER */
+.bx-wrapper .bx-pager {
+    text-align: center;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: rgb(138, 160, 138);
+    text-indent: -9999px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: rgb(10, 45, 10);
+}
+
+.bx-wrapper .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+    display: inline-block;
+    vertical-align: bottom;
+    *zoom: 1;
+    *display: inline;
+}
+
+.bx-wrapper .bx-pager-item {
+    font-size: 0;
+    line-height: 0;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bx-wrapper .bx-prev {
+    left: 10px;
+    background: url('images/controls.png') no-repeat 0 -32px;
+}
+
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus {
+    background-position: 0 0;
+}
+
+.bx-wrapper .bx-next {
+    right: 10px;
+    background: url('images/controls.png') no-repeat -43px -32px;
+}
+
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+    background-position: -43px 0;
+}
+
+.bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+    display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+.bx-wrapper .bx-controls-auto {
+    text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+    display: block;
+    text-indent: -9999px;
+    width: 10px;
+    height: 11px;
+    outline: 0;
+    background: url('images/controls.png') -86px -11px no-repeat;
+    margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active,
+.bx-wrapper .bx-controls-auto .bx-start:focus {
+    background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+    display: block;
+    text-indent: -9999px;
+    width: 9px;
+    height: 11px;
+    outline: 0;
+    background: url('images/controls.png') -86px -44px no-repeat;
+    margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active,
+.bx-wrapper .bx-controls-auto .bx-stop:focus {
+    background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    text-align: left;
+    width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+    right: 0;
+    width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+.bx-wrapper .bx-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #666;
+    background: rgba(80, 80, 80, 0.75);
+    width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+    color: #fff;
+    font-family: Arial;
+    display: block;
+    font-size: .85em;
+    padding: 10px;
+}
