@@ -39,14 +39,24 @@
 
     <section>
         <div id="imgWrap">
-            <ul class="slider">
+            <!-- <ul class="slider">
                 <li><img src="image/KakaoTalk_20220812_202513884_01.jpg" alt="풍경"></li>
                 <li><img src="image/KakaoTalk_20220812_202513884_02.jpg" alt="풍경"></li>
                 <li><img src="image/KakaoTalk_20220812_204423089.jpg" alt="풍경"></li>
                 <li><img src="image/KakaoTalk_20220812_204423089_01.jpg" alt="풍경"></li>
                 <li><img src="image/KakaoTalk_20220812_204423089_02.jpg" alt="풍경"></li>
-            </ul>
+            </ul> -->
+            <div class="slider">
+                <img src="image/KakaoTalk_20220812_202513884_01.jpg" alt="풍경">
+                <img src="image/KakaoTalk_20220812_202513884_02.jpg" alt="풍경">
+                <img src="image/KakaoTalk_20220812_204423089.jpg" alt="풍경">
+                <img src="image/KakaoTalk_20220812_204423089_01.jpg" alt="풍경">
+                <img src="image/KakaoTalk_20220812_204423089_02.jpg" alt="풍경">
+            </div>
+            <button id="prev">누름</button>
+        <button id="next">누름</button>
         </div>
+        
 
     </section>
 
@@ -71,21 +81,56 @@
     </footer>
 
     <script>
+        let imgIndex =0;
+        let position = 0;
+        const imgWidth = 336;
+        const prevBtn = document.querySelector('#prev');
+        const nextBtn = document.querySelector('#next');
+        const img = document.querySelector('.slider');
 
-        // let gnb = document.querySelectorAll('#gnb>li');
-        // let gnbElement = document.querySelector('#gnb');
-
-        // for(let i = 0; i<gnb.length; i++){
-        //     gnb[i].addEventListener('mouseover', ()=>{
-        //         gnbElement.classList.add('on');
-        //     });
-        // }
-        // let headElement = document.querySelector('header');
-        // headElement.addEventListener('mouseover', (e)=>{
-        //     if(e.target.id == 'gnb'){
-        //         gnbElement.classList.remove('on');
+        // push.addEventListener('click',function(){
+        // let img = document.querySelector('ul>li>img');
+        // let count = 1;
+        //     if(count < 5){
+        //         count++;
+        //         // img.animate({marginLeft:'-20rem'}, 100);
+        //         // +=을 하면 에러나고 아님 됌.
+        //         position += imgWidth;
+        //         img.style.transform =`translateX(${position}px)`;
+                
         //     }
-        // })
+        // });
+
+
+        function prev(){
+            if(imgIndex >0){
+                nextBtn.removeAttribute("disabled");
+                position += imgWidth;
+                img.style.transform =`translateX(${position}px)`;
+                imgIndex = imgIndex - 1;
+            }
+            if(imgIndex == 0){
+                prevBtn.setAttribute('disable','true');
+            }
+        }
+        function next(){
+            if(imgIndex <2){
+                prevBtn.removeAttribute('disabled');
+                position -= imgWidth;
+                img.style.transform = `translateX(${position}px)`;
+                imgIndex = imgIndex +1;
+            }
+            if(imgIndex == 2){
+                nextBtn.setAttribute('disabled', 'true');
+            }
+        }
+        function init(){
+            prevBtn.setAttribute('disable', 'true');
+            prevBtn.addEventListener('click', prev);
+            nextBtn.addEventListener('click', next);
+        }
+        
+        init();
 
     </script>
 

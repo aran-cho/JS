@@ -4,8 +4,7 @@
  * Written while drinking Belgian ales and listening to jazz
  * Licensed under MIT (http://opensource.org/licenses/MIT)
  */
-
-;(function($) {
+(function($) {
 
   var defaults = {
 
