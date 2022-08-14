@@ -115,6 +115,28 @@ img{
     position: relative;
     left: 0;
 }
+#imgWrap{
+    margin: auto;
+    width: 60rem;
+    text-align: center;
+    overflow: hidden;
+}
+.slider{
+    display: flex;
+    width: 60rem;
+    margin-left: 2rem;
+}
+.slider>img {
+    width: 18rem;
+    height: 20rem;
+    position: relative;
+    margin: 1rem;
+}
+#prev, #next{
+    margin-bottom: 1rem;
+    border: 1px solid;
+    display: inline-block;
+}
 
 
 /* footer */

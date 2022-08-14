@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Todolist_D.css">
+
+    <title> 개인포트폴리오_diary </title>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1><a href="#">TODAY</a></h1>
+
+            <ul id="gnb">
+                <li>
+                    <a href="#">INFORMATION</a>
+                    <!-- 계절별로 -->
+                </li>
+
+                <li>
+                    <a href="#">DIARTY</a>
+                </li>
+
+                <li>
+                    <a href="#">TO-DO LIST</a>
+                </li>
+
+            </ul>
+
+            <div id="util">
+                <a href="#">LOGIN</a>
+                <button>
+                    <h3><a href="#">START FOR FREE</a></h3>
+                </button>
+            </div>
+    </div>
+    </header>
+
+    <section>
+        <div id="imgWrap">
+            <div class="slider">
+                <img src="image/KakaoTalk_20220812_202513884_01.jpg" alt="풍경">
+                <img src="image/KakaoTalk_20220812_202513884_02.jpg" alt="풍경">
+                <img src="image/KakaoTalk_20220812_204423089.jpg" alt="풍경">
+                <img src="image/KakaoTalk_20220812_204423089_01.jpg" alt="풍경">
+                <img src="image/KakaoTalk_20220812_204423089_02.jpg" alt="풍경">
+            </div>
+            <button id="prev">누름</button>
+            <button id="next">누름</button>
+
+
+    </section>
+
+    <footer>
+        <div class="contact">
+            <H3>GET IN TOUCH</H3>
+            <P class="email">EMAIL</P>
+            <P class="message">MESSAGE</P>
+            <button>SEND</button>
+            <p>Untitled. All right reserved | Design:ARNA CHO</p>
+        </div>
+
+        <div class="follow">
+            <h3>FOLLOW</h3>
+            <div class="icons">
+                <img class=" icon" src="image/facebook.png" alt="">
+                <img class=" icon" src="image/instagram.png" alt="">
+                <img class=" icon" src="image/github.png" alt="">
+                <img class=" icon" src="image/email.png" alt="">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let imgIndex = 0;
+        let position = 0;
+        const imgWidth = 336;
+        const prevBtn = document.querySelector('#prev');
+        const nextBtn = document.querySelector('#next');
+        const img = document.querySelector('.slider');
+
+        // push.addEventListener('click',function(){
+        // let img = document.querySelector('ul>li>img');
+        // let count = 1;
+        //     if(count < 5){
+        //         count++;
+        //         // img.animate({marginLeft:'-20rem'}, 100);
+        //         // +=을 하면 에러나고 아님 됌.
+        //         position += imgWidth;
+        //         img.style.transform =`translateX(${position}px)`;
+
+        //     }
+        // });
+
+
+        function prev() {
+            if (imgIndex > 0) {
+                nextBtn.removeAttribute("disabled");
+                // disabled :버튼 비활성화
+                position += imgWidth;
+                img.style.transform = `translateX(${position}px)`;
+                imgIndex = imgIndex - 1;
+            }
+            if (imgIndex == 0) {
+                prevBtn.setAttribute('disable', 'true');
+            }
+        }
+        function next() {
+            if (imgIndex < 2) {
+                prevBtn.removeAttribute('disabled');
+                position -= imgWidth;
+                img.style.transform = `translateX(${position}px)`;
+                imgIndex = imgIndex + 1;
+            }
+            if (imgIndex == 2) {
+                nextBtn.setAttribute('disabled', 'true');
+            }
+        }
+        function init() {
+            prevBtn.setAttribute('disable', 'true');
+            prevBtn.addEventListener('click', prev);
+            nextBtn.addEventListener('click', next);
+        }
+
+        init();
+
+    </script>
+
+</body>
+
+</html>
