@@ -4,6 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Todolist_D.css">
+    <script src="../browser/js.js"></script>
+    
+    <script>
+        $(function () {
+            $('.btn2').hide();
+
+            $('.btn2').on('click', function () {
+                $('#txtImg1').slideDown(1000, function () {
+                    $('.btn2').hide();
+                    $('.btn1').show();
+
+                });
+            });
+            $('.btn1').on('click', function () {
+                $('#txtImg1').slideUp(1000, function () {
+                    $('.btn1').hide();
+                    $('.btn2').show();
+
+                });
+
+            });
+
+            $('.btn4').hide();
+
+            $('.btn4').on('click', function () {
+                $('#txtImg2').slideDown(1000, function () {
+                    $('.btn4').hide();
+                    $('.btn3').show();
+
+                });
+            });
+            $('.btn3').on('click', function () {
+                $('#txtImg2').slideUp(1000, function () {
+                    $('.btn3').hide();
+                    $('.btn4').show();
+
+                });
+
+            });
+
+            $('.btn6').hide();
+
+            $('.btn6').on('click', function () {
+                $('#txtImg3').slideDown(1000, function () {
+                    $('.btn6').hide();
+                    $('.btn5').show();
+
+                });
+            });
+            $('.btn5').on('click', function () {
+                $('#txtImg3').slideUp(1000, function () {
+                    $('.btn5').hide();
+                    $('.btn6').show();
+
+                });
+
+            });
+
+        });
+
+    </script>
 
     <title> 개인포트폴리오_diary </title>
 
@@ -16,16 +77,16 @@
 
             <ul id="gnb">
                 <li>
-                    <a href="#">INFORMATION</a>
+                    <a href="Todolist_information.html">INFORMATION</a>
                     <!-- 계절별로 -->
                 </li>
 
                 <li>
-                    <a href="#">DIARTY</a>
+                    <a href="Todolist_diary.html">DIARTY</a>
                 </li>
 
                 <li>
-                    <a href="#">TO-DO LIST</a>
+                    <a href="Todolist_list.html">TO-DO LIST</a>
                 </li>
 
             </ul>
@@ -41,32 +102,97 @@
 
     <section>
         <div id="imgWrap">
-            <!-- <ul class="slider">
-                <li><img src="image/KakaoTalk_20220812_202513884_01.jpg" alt="풍경"></li>
-                <li><img src="image/KakaoTalk_20220812_202513884_02.jpg" alt="풍경"></li>
-                <li><img src="image/KakaoTalk_20220812_204423089.jpg" alt="풍경"></li>
-                <li><img src="image/KakaoTalk_20220812_204423089_01.jpg" alt="풍경"></li>
-                <li><img src="image/KakaoTalk_20220812_204423089_02.jpg" alt="풍경"></li>
-            </ul> -->
             <div class="slider">
-                <img src="image/KakaoTalk_20220812_202513884_01.jpg" alt="풍경">
-                <img src="image/KakaoTalk_20220812_202513884_02.jpg" alt="풍경">
-                <img src="image/KakaoTalk_20220812_204423089.jpg" alt="풍경">
-                <img src="image/KakaoTalk_20220812_204423089_01.jpg" alt="풍경">
-                <img src="image/KakaoTalk_20220812_204423089_02.jpg" alt="풍경">
+                <div id="box">
+                    <div id="txt">
+                        <h1>8/1</h1>
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ligula et mi pulvinar
+                        convallis sit amet at velit. In id enim purus. Interdum et malesuada fames ac ante ipsum primis
+                        in faucibus. Proin malesuada erat sem, vitae faucibus eros sagittis nec. Etiam mi nunc, congue
+                        quis neque vel, tempor tempus lacus. Nunc sodales urna sed finibus fermentum. Maecenas gravida
+                        commodo metus, non imperdiet tortor pretium sed. Nunc convallis fringilla sapien id faucibus.
+                        Phasellus blandit ultricies leo, quis mattis erat commodo sed. Nulla facilisi. Proin id enim nec
+                        mauris posuere rutrum. Etiam non felis ac augue fermentum porta vel ac eros.
+                        <br>
+                        <button class="btn1">>>></button>
+                        <button class="btn2">---</button>
+                    </div>
+                    <div id="txtImg1"><img src="image/KakaoTalk_20220812_202513884_01.jpg" alt="풍경"></div>
+
+                </div>
+
+                <!-- <div id="box">
+                    <div id="txt">
+                        <h1>8/4</h1>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ligula et mi pulvinar
+                        convallis sit amet at velit. In id enim purus. Interdum et malesuada fames ac ante ipsum primis
+                        in faucibus. Proin malesuada erat sem, vitae faucibus eros sagittis nec. Etiam mi nunc, congue
+                        quis neque vel, tempor tempus lacus. Nunc sodales urna sed finibus fermentum.
+                        <br>
+                        <button class="btn3">>>></button>
+                        <button class="btn4">---</button>
+                    </div>
+                    <div id="txtImg2"><img src="image/KakaoTalk_20220812_202513884_01.jpg" alt="풍경"></div>
+                </div> -->
             </div>
-            <button id="prev">누름</button>
-            <button id="next">누름</button>
-            
+
             <div class="slider">
-                <img src="image/KakaoTalk_20220812_202513884_01.jpg" alt="풍경">
-                <img src="image/KakaoTalk_20220812_202513884_02.jpg" alt="풍경">
-                <img src="image/KakaoTalk_20220812_204423089.jpg" alt="풍경">
-                <img src="image/KakaoTalk_20220812_204423089_01.jpg" alt="풍경">
-                <img src="image/KakaoTalk_20220812_204423089_02.jpg" alt="풍경">
+
+                <div id="box">
+                    <div id="txt">
+                        <h1>8/1</h1>
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ligula et mi pulvinar
+                        convallis sit amet at velit. In id enim purus. Interdum et malesuada fames ac ante ipsum primis
+                        in faucibus. Proin malesuada erat sem, vitae faucibus eros sagittis nec. Etiam mi nunc, congue
+                        quis neque vel, tempor tempus lacus. Nunc sodales urna sed finibus fermentum. Maecenas gravida
+                        commodo metus, non imperdiet tortor pretium sed. Nunc convallis fringilla sapien id faucibus.
+                        Phasellus blandit ultricies leo, quis mattis erat commodo sed. Nulla facilisi. Proin id enim nec
+                        mauris posuere rutrum. Etiam non felis ac augue fermentum porta vel ac eros.
+                        <br>
+                        <button class="btn3">>>></button>
+                        <button class="btn4">---</button>
+                    </div>
+                    <div id="txtImg2"><img src="image/KakaoTalk_20220812_202513884_01.jpg" alt="풍경"></div>
+
+                </div>
             </div>
-            <button id="prev">누름</button>
-            <button id="next">누름</button>
+
+            <div class="slider">
+                <div id="box">
+                    <div id="txt">
+                        <h1>8/1</h1>
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ligula et mi pulvinar
+                        convallis sit amet at velit. In id enim purus. Interdum et malesuada fames ac ante ipsum primis
+                        in faucibus. Proin malesuada erat sem, vitae faucibus eros sagittis nec. Etiam mi nunc, congue
+                        quis neque vel, tempor tempus lacus. Nunc sodales urna sed finibus fermentum. Maecenas gravida
+                        commodo metus, non imperdiet tortor pretium sed. Nunc convallis fringilla sapien id faucibus.
+                        Phasellus blandit ultricies leo, quis mattis erat commodo sed. Nulla facilisi. Proin id enim nec
+                        mauris posuere rutrum. Etiam non felis ac augue fermentum porta vel ac eros.
+                        <br>
+                        <button class="btn5">>>></button>
+                        <button class="btn6">---</button>
+                    </div>
+                    <div id="txtImg3"><img src="image/KakaoTalk_20220812_202513884_01.jpg" alt="풍경"></div>
+
+                </div>
+            </div>
+
+            <div class="slider">
+                <div id="box">
+                    <div id="txt">
+                        <!-- 입력공간 만들기 
+                        input 창 만들어서 innerText 하기,,, 노마드 코더에서 해봤음
+                    사용자가 입력한 값을 그대로 가져오는것-->
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
         </div>
 
         <!-- <div id="bigImgWrap">
@@ -96,60 +222,6 @@
         </div>
     </footer>
 
-    <script>
-        let imgIndex = 0;
-        let position = 0;
-        const imgWidth = 336;
-        const prevBtn = document.querySelector('#prev');
-        const nextBtn = document.querySelector('#next');
-        const img = document.querySelector('.slider');
-
-        // push.addEventListener('click',function(){
-        // let img = document.querySelector('ul>li>img');
-        // let count = 1;
-        //     if(count < 5){
-        //         count++;
-        //         // img.animate({marginLeft:'-20rem'}, 100);
-        //         // +=을 하면 에러나고 아님 됌.
-        //         position += imgWidth;
-        //         img.style.transform =`translateX(${position}px)`;
-
-        //     }
-        // });
-
-
-        function prev() {
-            if (imgIndex > 0) {
-                nextBtn.removeAttribute("disabled");
-                // disabled :버튼 비활성화
-                position += imgWidth;
-                img.style.transform = `translateX(${position}px)`;
-                imgIndex = imgIndex - 1;
-            }
-            if (imgIndex == 0) {
-                prevBtn.setAttribute('disable', 'true');
-            }
-        }
-        function next() {
-            if (imgIndex < 2) {
-                prevBtn.removeAttribute('disabled');
-                position -= imgWidth;
-                img.style.transform = `translateX(${position}px)`;
-                imgIndex = imgIndex + 1;
-            }
-            if (imgIndex == 2) {
-                nextBtn.setAttribute('disabled', 'true');
-            }
-        }
-        function init() {
-            prevBtn.setAttribute('disable', 'true');
-            prevBtn.addEventListener('click', prev);
-            nextBtn.addEventListener('click', next);
-        }
-
-        init();
-
-    </script>
 
 </body>
 

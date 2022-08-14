@@ -147,35 +147,26 @@ footer {
 /* section */
 #imgWrap{
     margin: auto;
-    width: 60rem;
+    width: 62rem;
     text-align: center;
     overflow: hidden;
 }
 .slider{
     display: flex;
     width: 60rem;
-    margin-left: 2rem;
 }
-.slider>img {
-    width: 18rem;
-    height: 20rem;
-    position: relative;
+#box{
+    /* margin: 1rem; */
+    border-bottom: 1px solid rgb(196, 196, 196);
+
+}
+#txt{
+    text-align: left;
+    margin: 2rem;
+    line-height: 1.5rem;
+}
+img {
+    width: 100%;
     margin: 1rem;
 }
-#prev, #next{
-    margin-bottom: 1rem;
-    border: 1px solid;
-    display: inline-block;
-}
 
-/* #bigImgWrap{
-    display: flex;
-    overflow: hidden;
-    border: 1px solid;
-    
-} */
-
-/* overflow hidden
-랩을 히든함
-가로사이즈만큼 이미지를 밀어넣음
-버튼을 누를때 20rem 민다(animate) */
