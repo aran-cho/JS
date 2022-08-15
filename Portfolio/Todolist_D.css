@@ -191,8 +191,11 @@ input{
 #inputDay{
     margin-bottom: 0.5rem;
 }
-
-
+#next{
+    text-align: left;
+    margin: 2rem;
+}
+/* 날짜랑 일기랑 다르게 디자인 주기 */
 
 
 
