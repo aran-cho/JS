@@ -148,6 +148,10 @@ footer {
     padding: 0.3rem;
 }
 /* section */
+section
+{
+    margin: 0 auto;
+}
 #imgWrap{
     margin: auto;
     width: 62rem;
@@ -158,19 +162,31 @@ footer {
     display: flex;
     width: 60rem;
 }
-#box{
+.box{
     /* margin: 1rem; */
     border-bottom: 1px solid rgb(196, 196, 196);
-
 }
-#txt{
+.txt>p, #nextDay{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.txt{
     text-align: left;
     margin: 2rem;
     line-height: 1.5rem;
 }
 img {
     width: 100%;
-    margin: 1rem;
+    margin: 0 1rem 1rem 1rem;
+}
+.txt>button{
+    margin-top: 1rem;
+    width: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    background: rgba(131, 131, 131, 0.2);
+    color: rgb(131, 131, 131);
 }
 #imgTxt{
     margin: 1rem;
@@ -191,11 +207,13 @@ input{
 #inputDay{
     margin-bottom: 0.5rem;
 }
-#next{
+.next{
     text-align: left;
     margin: 2rem;
 }
+
 /* 날짜랑 일기랑 다르게 디자인 주기 */
+
 
 
 

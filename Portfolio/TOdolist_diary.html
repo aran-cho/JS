@@ -4,80 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Todolist_D.css">
+    <link rel="stylesheet" href="Todolist_D.js">
     <script src="../browser/js.js"></script>
-    <script>
-        $(function () {
-            $('#imgTxt>#box').hide();
-            let input1 = document.querySelector('#inputDay');
-            let input2 = document.querySelector('#inputTxt');
-
-            $('#imgTxt>button').on('click', function () {
-                alert('일기가 등록되었습니다.');
-                // $('#imgTxt>#box').fadeIn(2000);
-                document.querySelector('#nextDay').innerText = input1.value;
-                document.querySelector('#nextTxt').innerText = input2.value;
-            });
-
-
-            //코드 줄여보기 (저번에 배운거 참고)
-            $('.btn2').hide();
-
-            $('.btn2').on('click', function () {
-                $('#txtImg1').slideDown(1000, function () {
-                    $('.btn2').hide();
-                    $('.btn1').show();
-
-                });
-            });
-            $('.btn1').on('click', function () {
-                $('#txtImg1').slideUp(1000, function () {
-                    $('.btn1').hide();
-                    $('.btn2').show();
-
-                });
-
-            });
-
-            $('.btn4').hide();
-
-            $('.btn4').on('click', function () {
-                $('#txtImg2').slideDown(1000, function () {
-                    $('.btn4').hide();
-                    $('.btn3').show();
-
-                });
-            });
-            $('.btn3').on('click', function () {
-                $('#txtImg2').slideUp(1000, function () {
-                    $('.btn3').hide();
-                    $('.btn4').show();
-
-                });
-
-            });
-
-            $('.btn6').hide();
-
-            $('.btn6').on('click', function () {
-                $('#txtImg3').slideDown(1000, function () {
-                    $('.btn6').hide();
-                    $('.btn5').show();
-
-                });
-            });
-            $('.btn5').on('click', function () {
-                $('#txtImg3').slideUp(1000, function () {
-                    $('.btn5').hide();
-                    $('.btn6').show();
-
-                });
-
-            });
-
-
-        });
-
-    </script>
+    <script src="Todolist_D.js"></script>
 
 
     <title> 개인포트폴리오_diary </title>
@@ -114,36 +43,24 @@
         </div>
     </header>
 
+    <!-- <form>
+        <div id="imgTxt">
+            <input type="text" id="inputDay" style="width: 50%;  height: 2rem" placeholder="  날짜 입력" required />
+            <input type="text" id="inputTxt" style="width: 100%; height: 30rem;" placeholder="  일기 입력" required />
+            <button>register</button>
+        </div>
+    </form> -->
+
     <section>
         <div id="imgTxt">
-            <input type="text" id="inputDay" style="width: 50%;  height: 2rem" placeholder="  날짜 입력" />
-                <input type="text" id="inputTxt" style="width: 100%; height: 30rem;" placeholder="  일기 입력" />
-                <button>register</button>
-
-                    <div id="box">
-                        <div id="txt">
-                            <h1>9/5</h1>
-        
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ligula et mi pulvinar
-                            convallis sit amet at velit. In id enim purus. Interdum et malesuada fames ac ante ipsum primis
-                            in faucibus. Proin malesuada erat sem, vitae faucibus eros sagittis nec. Etiam mi nunc, congue
-                            quis neque vel, tempor tempus lacus. Nunc sodales urna sed finibus fermentum. Maecenas gravida
-                            commodo metus, non imperdiet tortor pretium sed. Nunc convallis fringilla sapien id faucibus.
-                            Phasellus blandit ultricies leo, quis mattis erat commodo sed. Nulla facilisi. Proin id enim nec
-                            mauris posuere rutrum. Etiam non felis ac augue fermentum porta vel ac eros.
-                            <br>
-                            <!-- <button class="btn1">>>></button>
-                            <button class="btn2">---</button> -->
-                        </div>
-                        <!-- <div id="txtImg7"><img src="image/KakaoTalk_20220812_202513884_01.jpg" alt="풍경"></div> -->
-                    </div>
-                    <!-- 입력을 하지 않으면 입력하라는 알럿뜨고, 밑에 새로운 글 생기지 않게 앤드 입력한 텍스트값을 가지고오기 -->
+            <input type="text" id="inputDay" style="width: 50%;  height: 2rem" placeholder="  날짜 입력" required />
+            <input type="text" id="inputTxt" style="width: 100%; height: 30rem;" placeholder="  일기 입력" required />
+            <button>register</button>
         </div>
-
 
         <div id="imgWrap">
 
-            <div id="next">
+            <div class="next">
                 <div id="nextDay">
                 </div>
                 <div id="nextTxt">
@@ -151,9 +68,9 @@
             </div>
 
             <div class="slider">
-                <div id="box">
-                    <div id="txt">
-                        <h1>8/29</h1>
+                <div class="box">
+                    <div class="txt">
+                        <p>8/10</p>
 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ligula et mi pulvinar
                         convallis sit amet at velit. In id enim purus. Interdum et malesuada fames ac ante ipsum primis
@@ -163,8 +80,8 @@
                         Phasellus blandit ultricies leo, quis mattis erat commodo sed. Nulla facilisi. Proin id enim nec
                         mauris posuere rutrum. Etiam non felis ac augue fermentum porta vel ac eros.
                         <br>
-                        <button class="btn1">>>></button>
-                        <button class="btn2">---</button>
+                        <button class="btn1">close</button>
+                        <button class="btn2">open</button>
                     </div>
                     <div id="txtImg1"><img src="image/KakaoTalk_20220812_202513884_01.jpg" alt="풍경"></div>
 
@@ -173,9 +90,9 @@
 
             <div class="slider">
 
-                <div id="box">
-                    <div id="txt">
-                        <h1>8/20</h1>
+                <div class="box">
+                    <div class="txt">
+                        <p>7/20</p>
 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ligula et mi pulvinar
                         convallis sit amet at velit. In id enim purus. Interdum et malesuada fames ac ante ipsum primis
@@ -185,8 +102,8 @@
                         Phasellus blandit ultricies leo, quis mattis erat commodo sed. Nulla facilisi. Proin id enim nec
                         mauris posuere rutrum. Etiam non felis ac augue fermentum porta vel ac eros.
                         <br>
-                        <button class="btn3">>>></button>
-                        <button class="btn4">---</button>
+                        <button class="btn3">close</button>
+                        <button class="btn4">open</button>
                     </div>
                     <div id="txtImg2"><img src="image/KakaoTalk_20220812_202513884_01.jpg" alt="풍경"></div>
 
@@ -194,9 +111,9 @@
             </div>
 
             <div class="slider">
-                <div id="box">
-                    <div id="txt">
-                        <h1>8/15</h1>
+                <div class="box">
+                    <div class="txt">
+                        <p>7/15</p>
 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ligula et mi pulvinar
                         convallis sit amet at velit. In id enim purus. Interdum et malesuada fames ac ante ipsum primis
@@ -206,8 +123,8 @@
                         Phasellus blandit ultricies leo, quis mattis erat commodo sed. Nulla facilisi. Proin id enim nec
                         mauris posuere rutrum. Etiam non felis ac augue fermentum porta vel ac eros.
                         <br>
-                        <button class="btn5">>>></button>
-                        <button class="btn6">---</button>
+                        <button class="btn5">close</button>
+                        <button class="btn6">open</button>
                     </div>
                     <div id="txtImg3"><img src="image/KakaoTalk_20220812_202513884_01.jpg" alt="풍경"></div>
 

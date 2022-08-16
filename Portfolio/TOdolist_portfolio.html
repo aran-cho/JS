@@ -44,12 +44,10 @@
             </div>
             <img src="./image/today_gray.png" alt="">
         </div>
-
-    
-<
-
     </section>
-
+    <article>
+        
+    </article>
     <footer>
         <div class="contact">
             <H3>GET IN TOUCH</H3>
@@ -69,61 +67,7 @@
         </div>
     </footer>
 
-    <script>
-
-let imgIndex = 0;
-        let position = 0;
-        const imgWidth = 336;
-        const prevBtn = document.querySelector('#prev');
-        const nextBtn = document.querySelector('#next');
-        const img = document.querySelector('.slider');
-
-        // push.addEventListener('click',function(){
-        // let img = document.querySelector('ul>li>img');
-        // let count = 1;
-        //     if(count < 5){
-        //         count++;
-        //         // img.animate({marginLeft:'-20rem'}, 100);
-        //         // +=을 하면 에러나고 아님 됌.
-        //         position += imgWidth;
-        //         img.style.transform =`translateX(${position}px)`;
-
-        //     }
-        // });
-
-
-        function prev() {
-            if (imgIndex > 0) {
-                nextBtn.removeAttribute("disabled");
-                // disabled :버튼 비활성화
-                position += imgWidth;
-                img.style.transform = `translateX(${position}px)`;
-                imgIndex = imgIndex - 1;
-            }
-            if (imgIndex == 0) {
-                prevBtn.setAttribute('disable', 'true');
-            }
-        }
-        function next() {
-            if (imgIndex < 2) {
-                prevBtn.removeAttribute('disabled');
-                position -= imgWidth;
-                img.style.transform = `translateX(${position}px)`;
-                imgIndex = imgIndex + 1;
-            }
-            if (imgIndex == 2) {
-                nextBtn.setAttribute('disabled', 'true');
-            }
-        }
-        function init() {
-            prevBtn.setAttribute('disable', 'true');
-            prevBtn.addEventListener('click', prev);
-            nextBtn.addEventListener('click', next);
-        }
-
-        init();
-
-    </script>
+    <script src="Todolist_P.js"></script>
 
 </body>
 
