@@ -30,9 +30,18 @@ function add(){
     console.log(btn2);
     // 생성되었음
 
-    let checkBtn = document.querySelector("#list>button");
+    // let checkBtn = document.querySelector("#list>button");
 
-    function check() {}
+    // function check() {}
+
+    
 }
 
 btn.addEventListener('click', add);
+
+// e.target.delete(remove)->삭제
+//사라지고 나타나고-> done
+//삭제를 눌렀을때 txt 를 변수에 저장 클릭한 아이의 txt를 
+//공백이면 알럿
+//remove
+//done add txt변수를 저장
