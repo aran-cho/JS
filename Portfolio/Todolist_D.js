@@ -5,9 +5,9 @@ $(function () {
 
   $("#imgTxt>button").on("click", function () {
     if (inputD.value === "" || inputT.value === "") {
-      alert("일기를 등록하세요.");
+      alert("Please input your diary.");
     } else {
-      alert("일기가 등록되었습니다.");
+      alert("Your diary registers.");
       $(".next").show();
       document.querySelector("#nextDay").innerText = inputD.value;
       document.querySelector("#nextTxt").innerText = inputT.value;

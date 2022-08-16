@@ -191,6 +191,15 @@ footer{
 }
 /* main */
 main{
-    margin-top: 2rem;
-    text-align: center;
+    margin: 2rem;
+    /* text-align: center; */
+    /* 부모요소에 text-align하면 가운데 정렬 가능 */
+}
+section{
+    margin-bottom: 2rem;
+}
+#list{
+    border: 1px solid black;
+    /* display: flex; */
+    margin-top: 1rem;
 }
