@@ -51,7 +51,7 @@ header>#gnb {
     width: 100%;
     display: flex;
     position: relative;
-    top: 1.8rem;
+    top: 2.5rem;
     left: 1rem;
     margin: 5px 0;
 }
@@ -64,7 +64,7 @@ header>#gnb {
     display: flex;
     position: relative;
     /* right: 8rem; */
-    top: 1.8rem;
+    top: 2.5rem;
 }
 
 #util>a {
