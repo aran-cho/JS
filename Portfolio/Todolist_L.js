@@ -13,6 +13,7 @@ function add(e) {
     let check = document.createAttribute('class');
     let txtCheck = document.createTextNode('√');
     //ㄷ 한자
+    
     let txt = document.createTextNode(inputText.value);
 
     divI.value = 'divList';
