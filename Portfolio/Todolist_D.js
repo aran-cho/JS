@@ -6,6 +6,7 @@ $(function () {
   $("#imgTxt>button").on("click", function () {
     if (inputD.value === "" || inputT.value === "") {
       alert("Please input your diary.");
+
       
     } else {
       alert("Your diary registers.");

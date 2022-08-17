@@ -7,9 +7,10 @@ const img = document.querySelector(".slider");
 
 function prev() {
   if (imgIndex > 0) {
-    
+
     nextBtn.removeAttribute("disabled");
     // disabled :버튼 비활성화
+    
     position += imgWidth;
     img.style.transform = `translateX(${position}px)`;
     imgIndex = imgIndex - 1;
