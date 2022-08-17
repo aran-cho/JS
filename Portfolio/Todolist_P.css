@@ -85,6 +85,10 @@ header>#gnb {
     background-color: rgb(92, 168, 113);
 }
 
+#util > button:hover {
+    background-color: rgb(48, 94, 61);
+}
+
 #util>button>h3>a {
     color: white;
     font-family: 'Alumni Sans Pinstripe', sans-serif;
@@ -153,6 +157,10 @@ margin-left: 50%;
 font-weight: bold;
 }
 
+#sta:hover {
+    background-color : rgb(92, 168, 113)
+}
+
 /* article */
 article>p{
     border-top: rgba(48, 94, 61, 0.6) 2px solid;
@@ -206,6 +214,9 @@ footer{
     margin-bottom: 30px;
     font-size: 0.5rem;
 }
+
+
+
 .contact> p{
     font-size: 0.5rem;
 }
