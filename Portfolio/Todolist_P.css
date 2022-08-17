@@ -5,7 +5,9 @@ body {
     width: 60rem;
     margin: auto;
 }
-
+button{
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
 /* 초기화 */
 * {
     margin: 0;
@@ -89,8 +91,9 @@ header>#gnb {
 }
 /* section */
 #set{
-    margin-top: 2rem;
     display: flex;
+    margin: 2rem 0;
+    justify-content: center;
 }
 #txt{
     position: relative;
@@ -98,7 +101,7 @@ header>#gnb {
     left: 1rem;
     width: 15rem;
 }
-h2, p{
+#txt>h2, p{
     text-align:left;
     line-height: 2rem;
     font-weight: bold;
@@ -137,7 +140,43 @@ img{
     border: 1px solid;
     display: inline-block;
 }
+#sta{
+width: 7rem;
+height: 3rem;
+font-size: 2rem;
+margin-bottom: 2rem;
+border: none;
+border-radius: 10px;
+background-color: rgb(48, 94, 61);
+color:white;
+margin-left: 50%;
+font-weight: bold;
+}
 
+/* article */
+article>p{
+    border-top: rgba(48, 94, 61, 0.6) 2px solid;
+    width: 13rem;
+    font-weight: bold;
+    color: #333;
+    font-size: 2rem;
+    padding-top: 0.5rem;
+}
+
+#imgBox>div>img{
+    width: 5rem;
+    margin: 2rem 0;
+    border: rgba(48, 94, 61, 0.4) 3px solid;
+    padding: 2rem;
+    border-radius: 3rem;
+}
+#imgBox>div{
+    display: flex;
+}
+#imgBox>div>h4{
+    padding: 4rem 3.5rem 3.5rem 2rem;
+    line-height: 1.5rem;
+}
 
 /* footer */
 footer{
